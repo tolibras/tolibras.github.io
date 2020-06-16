@@ -5,13 +5,11 @@
 	<title>Seja Bem-vindo ao ToLIBRAS</title>
 	<link rel="stylesheet" type="text/css" href="comum.css">
 	<style type="text/css">
-		main{
-			margin-bottom: 20em;
-		}
-		section.div1{
+
+		section.home{
 			background-image: url(imagens/Fundoinicial.jpg);
-    			background-repeat: no-repeat;
-    			background-size: 100%;
+    		background-repeat: no-repeat;
+    		background-size: 100%;
 		    color: white;
 		    text-align: center;
 		}
@@ -19,70 +17,73 @@
 			padding-top: 2em;
 			margin-bottom: 130px;
 		}
-		section.div1 h2{
+		section.home h2{
 			font-size: 35px;
 			margin-top: 50px;
 			font-weight: 600;
 		}
-		section.div1 img{
+		section.home img{
 			padding-top: 10px;
 		}
-		section.div2{
+		section.scrollhome{
 			background-color: white;
 			margin-top: 2em;
 		}
-		section.div1 button#bt1{
+		section.home button#cadastro{
 			background-color: #06D148;
-			color: white;
-			border-radius: 30px;
-			border-color: transparent;
-			font-size: 33px;
-			width: 225px;
-			height: 50px;
 			box-shadow: 0 5px #05B056;
 			margin-bottom: 10px;
 		}
-		section.div1 button#bt2{
+		section.home button#login{
 			background-color: #003CC7;
+			box-shadow: 0 5px #013ABE;
+		}
+		section.home button#login, button#cadastro{
 			color: white;
 			border-radius: 30px;
 			border-color: transparent;
 			font-size: 33px;
 			width: 225px;
 			height: 50px;
-			box-shadow: 0 5px #013ABE;
 		}
-		section.div1 div{
+		section.home div{
 			margin-top: 30px;
 			padding-bottom: 19em;
 		}
-		section.div2 figure{
+		section.scrollhome figure{
 			float: left;
 		}
-		section.div2{
-			vertical-align: middle;
+		section.scrollhome{
+			padding-top: 5em;
+			padding-bottom: 11em;
 		}
-		section.div2 p{
+		section.scrollhome p{
 			width: 44em;
 		}
-		div#explic1{
+		div#boxinfo1{
 			margin-bottom: 8em;
 		}
-		section.div2 div{
+		section.scrollhome div{
 			margin-left: 12em;
+		}
+		img#boxinfo{
+			height: 12em;
+		}
+		div#boxinfo{
+			padding-top: 2.5em;
 		}
 	</style>
 </head>
 <body>
 	<main>
-		<section class="div1">
+		<section class="home">
 			<picture>
 				<img src="imagens/LogoG.svg">
 			</picture>
-			<h2>Olá! Esteja a vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
+			<h2>Olá! Esteja à vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
 			<div>
-				<button id="bt1">Criar Conta</button><br>
-				<button id="bt2">Já Tenho</button>
+				<button id="cadastro">Criar conta</button><br>
+				<button id="login">Já tenho</button>
 			</div>
 		</section>
 		<header>
@@ -90,12 +91,12 @@
 				<img src="imagens/LogoP.svg">
 			</picture>
 		</header>
-		<section class="div2">
-			<div id="explic1">
+		<section class="scrollhome">
+			<div id="boxinfo1">
 				<figure>
-					<img src="imagens/SinalLibras.svg">
+					<img id="boxinfo" src="imagens/SinalLibras.png">
 				</figure>
-				<div>
+				<div id="boxinfo">
 					<h2>Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -105,11 +106,11 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div id="explic2">
+			<div id="boxinfo2">
 				<figure>
-					<img src="imagens/HomemEstudando.svg">
+					<img id="boxinfo" src="imagens/HomemEstudando.png">
 				</figure>
-				<div>
+				<div id="boxinfo">
 					<h2>Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
