@@ -3,28 +3,97 @@
 <head>
 	<meta charset="utf-8">
 	<title>Seja Bem-vindo ao ToLIBRAS</title>
+	<link rel="stylesheet" type="text/css" href="comum.css">
+	<style type="text/css">
+		main{
+			margin-bottom: 20em;
+		}
+		section.div1{
+			background-image: url(imagens/Fundoinicial.jpg);
+    		background-repeat: no-repeat;
+    		background-size: 100%;
+		    color: white;
+		    text-align: center;
+		}
+		section h1{
+			padding-top: 2em;
+			margin-bottom: 130px;
+		}
+		section.div1 h2{
+			font-size: 35px;
+			margin-top: 50px;
+			font-weight: 600;
+		}
+		section.div1 img{
+			padding-top: 10px;
+		}
+		section.div2{
+			background-color: white;
+			margin-top: 2em;
+		}
+		section.div1 button#bt1{
+			background-color: #06D148;
+			color: white;
+			border-radius: 30px;
+			border-color: transparent;
+			font-size: 33px;
+			width: 225px;
+			height: 50px;
+			box-shadow: 0 5px #05B056;
+			margin-bottom: 10px;
+		}
+		section.div1 button#bt2{
+			background-color: #003CC7;
+			color: white;
+			border-radius: 30px;
+			border-color: transparent;
+			font-size: 33px;
+			width: 225px;
+			height: 50px;
+			box-shadow: 0 5px #013ABE;
+		}
+		section.div1 div{
+			margin-top: 30px;
+			padding-bottom: 19em;
+		}
+		section.div2 figure{
+			float: left;
+		}
+		section.div2{
+			vertical-align: middle;
+		}
+		section.div2 p{
+			width: 44em;
+		}
+		div#explic1{
+			margin-bottom: 8em;
+		}
+		section.div2 div{
+			margin-left: 12em;
+		}
+	</style>
 </head>
 <body>
 	<main>
-		<section>
+		<section class="div1">
 			<picture>
-				<img src="Group 180.svg" alt="Logo Grande do ToLIBRAS">
+				<img src="Group 180.svg">
 			</picture>
 			<h2>Olá! Esteja a vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
 			<div>
-				<button>Criar Conta</button><br>
-				<button>Já Tenho</button>
+				<button id="bt1">Criar Conta</button><br>
+				<button id="bt2">Já Tenho</button>
 			</div>
 		</section>
 		<header>
 			<picture>
-				<img src="Group 181.svg" alt="Logo pequena do ToLIBRAS">
+				<img src="Group 181.svg">
 			</picture>
 		</header>
-		<section>
-			<div>
+		<section class="div2">
+			<div id="explic1">
 				<figure>
-					<img src="Group 179.svg" alt="icone do sinal de libras">
+					<img src="Group 179.svg">
 				</figure>
 				<div>
 					<h2>Lorem</h2>
@@ -36,9 +105,9 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div>
+			<div id="explic2">
 				<figure>
-					<img src="Group 158.svg" alt="icone do homem sentado em frente ao notebook">
+					<img src="Group 158.svg">
 				</figure>
 				<div>
 					<h2>Lorem</h2>
@@ -56,13 +125,13 @@
 		<h3>Todos os direitos reservados 2XXX©</h3>
 		<div>
 			<picture>
-				<img src="Vector.png" alt="icone do insta">
+				<img src="Vector.png" alt="">
 			</picture>
 			<picture>
-				<img src="imagens/face.svg" alt="icone do face">
+				<img src="imagens/face.svg" alt="">
 			</picture>
 			<picture>
-				<img src="imagens/twitter.svg" alt="icone do twitter">
+				<img src="imagens/twitter.svg" alt="">
 			</picture>
 		</div>
 	</footer>
