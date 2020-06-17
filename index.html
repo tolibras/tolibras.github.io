@@ -80,7 +80,7 @@
 		}
 	</style>
 </head>
-<body onscroll="fixarHead(event)">
+<body onscroll="fixarHead()">
 	<main>
 		<header id="head">
 			<picture>
@@ -148,7 +148,7 @@
 		</div>
 	</footer>
 </body>
-function fixarHead(event) {
+function fixarHead() {
   var posy = pageYOffset;
   var head = document.getElementById("head");
   if(posy>=730){
