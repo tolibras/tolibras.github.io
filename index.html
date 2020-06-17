@@ -74,7 +74,7 @@
 		}
 	</style>
 </head>
-<body>
+<body onwheel="showCoords(event)">
 	<main>
 		<section class="home">
 			<picture>
@@ -86,7 +86,7 @@
 				<button id="login">Já tenho</button>
 			</div>
 		</section>
-		<header id="myDIV">
+		<header>
 			<picture>
 				<img src="imagens/LogoP.svg">
 			</picture>
@@ -138,10 +138,12 @@
 	</footer>
 </body>
 <script>
-document.getElementById("myDIV").addEventListener("wheel", myFunction);
-
-function myFunction() {
-  this.style.fontSize = "105px";
+function showCoords(event) {
+  var y = event.screenY;
+  if(y>100){
+    var head = document.getElementsByTagName(header);
+    head.style.position = "fixed";
+  }
 }
 </script>
 </html>
