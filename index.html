@@ -86,7 +86,7 @@
 				<button id="login">Já tenho</button>
 			</div>
 		</section>
-		<header>
+		<header id="myDIV">
 			<picture>
 				<img src="imagens/LogoP.svg">
 			</picture>
@@ -137,4 +137,11 @@
 		</div>
 	</footer>
 </body>
+<script>
+document.getElementById("myDIV").addEventListener("wheel", myFunction);
+
+function myFunction() {
+  this.style.fontSize = "105px";
+}
+</script>
 </html>
