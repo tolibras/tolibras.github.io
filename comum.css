@@ -3,29 +3,15 @@
 	font-family: 'Advent Pro', sans-serif;
 	margin: 0;
 }
-header h1{
-	font-size: 40px;
-	margin-left: 15px;
-}
-header div{
+header div, div#fakehead div{
 	display: flex;
-	align-items: center;
-}
-li{
-	display: inline;
-	list-style-type: none;
-	margin: 0 1em;
-	font-size: 20px;
-}
-header{
+}header, div#fakehead{
 	background-color: #002D94;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	color: white;
 	padding: 1em;
-}nav{
-	margin: 0;
 }
 footer{
 	background-color: #002D94;

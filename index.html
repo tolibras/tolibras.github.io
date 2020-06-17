@@ -18,37 +18,49 @@
 			margin-bottom: 130px;
 		}
 		section.home h2{
-			font-size: 35px;
-			margin-top: 50px;
+			font-size: 33px;
+			margin-top: 80px;
 			font-weight: 600;
 		}
 		section.home img{
-			padding-top: 10px;
+			padding-top: 20px;
 		}
 		section.scrollhome{
 			background-color: white;
 			margin-top: 2em;
 		}
-		section.home button#cadastro{
+		button.cadastro{
 			background-color: #06D148;
 			box-shadow: 0 5px #05B056;
 			margin-bottom: 10px;
 		}
-		section.home button#login{
+		button.login{
 			background-color: #003CC7;
 			box-shadow: 0 5px #013ABE;
 		}
-		section.home button#login, button#cadastro{
+		section.home button.login, section.home button.cadastro{
 			color: white;
 			border-radius: 30px;
 			border-color: transparent;
-			font-size: 33px;
-			width: 225px;
-			height: 50px;
+			font-size: 25px;
+    		width: 200px;
+    		height: 50px;
+    		font-weight: 700;
+		}
+		header button.login, header button.cadastro, div#fakehead button.login,div#fakehead button.cadastro{
+			color: white;
+			border-radius: 30px;
+			border-color: transparent;
+			font-size: 23px;
+    		width: 165px;
+    		height: 50px;
+		}
+		div#fakehead button.cadastro, header#head button.cadastro{
+			margin-right: 10px;
 		}
 		section.home div{
 			margin-top: 30px;
-			padding-bottom: 19em;
+			padding-bottom: 18em;
 		}
 		section.scrollhome figure{
 			float: left;
@@ -74,17 +86,12 @@
 		}
 		header#head{
 			visibility: hidden;
-			width: 100%;
+			width: -webkit-fill-available;
 			top: 0;
 			position: fixed;
 		}
 		div#fakehead{
-			background-color: #002D94;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			color: white;
-			padding: 1em;
+			width: auto;
 		}
 	</style>
 </head>
@@ -94,6 +101,10 @@
 			<picture>
 				<img src="imagens/LogoP.svg">
 			</picture>
+			<div>
+				<button class="cadastro">Criar conta</button><br>
+				<button class="login">Já tenho</button>
+			</div>
 		</header>
 		<section class="home">
 			<picture>
@@ -101,14 +112,18 @@
 			</picture>
 			<h2>Olá! Esteja à vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
 			<div>
-				<button id="cadastro">Criar conta</button><br>
-				<button id="login">Já tenho</button>
+				<button class="cadastro">Criar conta</button><br>
+				<button class="login">Já tenho</button>
 			</div>
 		</section>
 		<div id="fakehead">
 			<picture>
 				<img src="imagens/LogoP.svg">
 			</picture>
+			<div>
+				<button class="cadastro">Criar conta</button><br>
+				<button class="login">Já tenho</button>
+			</div>
 		</div>
 		<section class="scrollhome">
 			<div id="boxinfo1">
@@ -160,7 +175,7 @@
 function fixarHead() {
   var posy = pageYOffset;
   var head = document.getElementById("head");
-  if(posy>=730){
+  if(posy>=720){
   	head.style.visibility = "visible";
   }
   else{
