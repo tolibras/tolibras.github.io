@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<title>Seja Bem-vindo ao ToLIBRAS</title>
 	<link rel="stylesheet" type="text/css" href="comum.css">
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/out/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-	<script src="semantic/ou/semantic.min.js"></script>
+	<script src="semantic/out/semantic.min.js"></script>
 	<style type="text/css">
 
+		/* 	 Section de apresentação   */
 		section.home{
 			background-image: url(imagens/Fundoinicial.jpg);
     		background-repeat: no-repeat;
@@ -28,9 +29,84 @@
 		section.home img{
 			padding-top: 20px;
 		}
+		section.home div{
+			margin-top: 30px;
+			padding-bottom: 18em;
+		}
+
+
+		/* 	 Header	  */
+		div#fakehead button.cadastro, header#head button.cadastro{
+			margin-right: 10px;
+		}
+		header#head{
+			visibility: hidden;
+			width: -webkit-fill-available;
+			top: 0;
+			position: fixed;
+		}
+		div#fakehead{
+			width: -webkit-fill-available;
+		}
+		header div,div#fakehead div{
+			display: flex;
+		}
+		header, div#fakehead{
+			background-color: #002D94;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			color: white;
+			padding: 1em;
+		}
+
+
+		/* 	 Section scrollhome	  */
+		#fr{
+			float: left;
+			margin-right: 2em;
+		}
+		#fl{
+			float: right;
+			margin-left: 2em;
+		}
 		section.scrollhome{
+			padding-top: 5em;
+			padding-bottom: 11em;
 			background-color: white;
 			margin-top: 2em;
+		}
+		section.scrollhome p{
+			width: 49em;
+			font-size: 16px;
+			font-weight: 600;
+		}
+		div#fld{
+			margin-right: 20em;
+			margin-top: 4em;
+			text-align: right;
+		}
+		div#frd{
+			margin-left: 19em;
+		}
+		img.boxinfo{
+			height: 12em;
+		}
+		div.boxinfo{
+			padding-top: 1em;
+		}
+		div#fld div{
+			margin-left: 19em;
+		}
+
+		/* 	 Butões	  */
+		header button.login, header button.cadastro, div#fakehead button.login,div#fakehead button.cadastro{
+			color: white;
+			border-radius: 30px;
+			border-color: transparent;
+			font-size: 23px;
+    		width: 165px;
+    		height: 50px;
 		}
 		button.cadastro{
 			background-color: #06D148;
@@ -41,6 +117,22 @@
 			background-color: #003CC7;
 			box-shadow: 0 5px #013ABE;
 		}
+		button.cadastro:hover{
+			background-color: #02ed4e;
+			box-shadow: 0 5px #06D148; 
+		}
+		button.login:hover{
+			background-color: #0242d6;
+			box-shadow: 0 5px #003CC7;
+		}
+		button{
+			cursor: pointer;
+			outline: none;
+		}
+		button.cadastro:active, button.login:active{
+			transform: translateY(5px);
+			box-shadow: none;
+		}
 		section.home button.login, section.home button.cadastro{
 			color: white;
 			border-radius: 30px;
@@ -50,53 +142,8 @@
     		height: 50px;
     		font-weight: 700;
 		}
-		header button.login, header button.cadastro, div#fakehead button.login,div#fakehead button.cadastro{
-			color: white;
-			border-radius: 30px;
-			border-color: transparent;
-			font-size: 23px;
-    		width: 165px;
-    		height: 50px;
-		}
-		div#fakehead button.cadastro, header#head button.cadastro{
-			margin-right: 10px;
-		}
-		section.home div{
-			margin-top: 30px;
-			padding-bottom: 18em;
-		}
-		section.scrollhome figure{
-			float: left;
-		}
-		section.scrollhome{
-			padding-top: 5em;
-			padding-bottom: 11em;
-		}
-		section.scrollhome p{
-			width: 44em;
-		}
-		div#boxinfo1{
-			margin-bottom: 8em;
-		}
-		section.scrollhome div{
-			margin-left: 12em;
-		}
-		img#boxinfo{
-			height: 12em;
-		}
-		div#boxinfo{
-			padding-top: 2.5em;
-		}
-		header#head{
-			visibility: hidden;
-			width: -webkit-fill-available;
-			top: 0;
-			position: fixed;
-		}
-		div#fakehead{
-			width: auto;
-		}
-	</style>
+
+</style>
 </head>
 <body onscroll="fixarHead()">
 	<main>
@@ -129,11 +176,11 @@
 			</div>
 		</div>
 		<section class="scrollhome">
-			<div id="boxinfo1">
+			<div id="frd">
 				<figure>
-					<img id="boxinfo" src="imagens/SinalLibras.png">
+					<img class="boxinfo" id="fr" src="imagens/SinalLibras.png">
 				</figure>
-				<div id="boxinfo">
+				<div class="boxinfo">
 					<h2>Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -143,11 +190,11 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
-			<div id="boxinfo2">
+			<div id="fld">
 				<figure>
-					<img id="boxinfo" src="imagens/HomemEstudando.png">
+					<img id="fl" class="boxinfo" src="imagens/HomemEstudando.png">
 				</figure>
-				<div id="boxinfo">
+				<div>
 					<h2>Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -178,7 +225,7 @@
 function fixarHead() {
   var posy = pageYOffset;
   var head = document.getElementById("head");
-  if(posy>=720){
+  if(posy>=680){
   	head.style.visibility = "visible";
   }
   else{
