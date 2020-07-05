@@ -2,9 +2,11 @@
   "name": "tolibras",
   "version": "1.0.0",
   "description": "You can use the [editor on GitHub](https://github.com/tolibras/tolibras.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
-  "main": "index.html",
+  "main": "sass/mystyles.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
     "url": "https://github.com/tolibras/tolibras.github.io/issues"
   },
   "homepage": "https://github.com/tolibras/tolibras.github.io#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
   }
 }
