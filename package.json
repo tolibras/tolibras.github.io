@@ -1,0 +1,21 @@
+{
+  "name": "tolibras",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/tolibras/tolibras.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tolibras/tolibras.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tolibras/tolibras.github.io/issues"
+  },
+  "homepage": "https://github.com/tolibras/tolibras.github.io#readme",
+  "dependencies": {
+  }
+}
