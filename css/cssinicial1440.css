@@ -19,7 +19,13 @@ section.home img{
 }
 section.home div{
 	margin-top: 30px;
-	padding-bottom: 20em;
+	padding-bottom: 17em;
+}
+div#page-modal{
+	display: none;
+}
+.modal-card{
+	width: 30em !important;
 }
 
 
@@ -41,7 +47,7 @@ header div,div#fakehead div{
 }
 header, div#fakehead{
 	background-color: #002D94;
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	justify-content: space-around;
 	color: white;
@@ -63,7 +69,7 @@ div.boxinfo{
 section.scrollhome figure{
 	text-align: center;
 }
-section.scrollhome p{
+.boxinfo p{
 	font-size: 18px;
 	font-weight: 600;
 }

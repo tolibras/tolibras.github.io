@@ -5,7 +5,7 @@
 }
 footer{
 	background-color: #002D94;
-	display:flex;
+	display:flex !important;
 	align-items: center;
 	justify-content: space-between;
 	padding: 2em;
@@ -13,10 +13,6 @@ footer{
 }
 footer div#img{
 	display: inline;
-}
-div#img div{
-	display: none;
-	height: 25px;
 }
 footer picture{
 	text-align: center;

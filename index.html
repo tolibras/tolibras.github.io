@@ -2,21 +2,19 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Seja Bem-vindo ao ToLIBRAS</title>
 
-	<!-- Semantic e JQuery -->
+	<!-- FontAwesome e JQuery -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-	<script src="semantic/out/semantic.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-	<!-- Css's -->
+	<!-- Bulma e Css's -->
 	<link rel="stylesheet" type="text/css" href="css/comum.css">
 	<link rel="stylesheet" media="screen and (max-width: 1920px) and (min-width: 1750px)" type="text/css" href="css/cssinicial1920.css">
 	<link rel="stylesheet" media="screen and (max-width: 1500px) and (min-width: 1281px)" type="text/css" href="css/cssinicial1440.css">
 	<link rel="stylesheet" media="screen and (max-width: 1280px)" type="text/css" href="css/cssinicial1280.css">
-
-	<!-- Js -->
-	<script src="Js/Paginicial.js"></script>
+	<link rel="stylesheet" type="text/css" href="bulma/css/bulma.min.css">
 </head>
 <body onscroll="fixarHead()">
 	<main>
@@ -49,9 +47,48 @@
 			</div>
 		</div>
 		<section class="scrollhome">
+			<div class="modal" id="page-modal">
+			  	<div class="modal-background"></div>
+		  		<div class="modal-card">
+		    		<header class="modal-card-head">
+		      			<p class="modal-card-title">Entrar</p>
+		      			<button class="delete" aria-label="close"></button>
+		    		</header>
+		    		<section class="modal-card-body">
+		      			<div class="field">
+							<p class="control has-icons-left has-icons-right">
+								<input class="input" type="email" placeholder="Email">
+								<span class="icon is-small is-left">
+								  <i class="fas fa-envelope"></i>
+								</span>
+								<span class="icon is-small is-right">
+								  <i class="fas fa-check"></i>
+								</span>
+							</p>
+						</div>
+						<div class="field">
+							<p class="control has-icons-left">
+								<input class="input" type="password" placeholder="Password">
+								<span class="icon is-small is-left">
+								  <i class="fas fa-lock"></i>
+								</span>
+							</p>
+						</div>
+		    		</section>
+		    		<footer class="modal-card-foot">
+		      			<div class="field">
+							<p class="control">
+								<button onclick="window.location.assign('Paginicial.html')" class="button is-primary">
+								  Login
+								</button>
+							</p>
+						</div>
+		    		</footer>
+		  		</div>
+			</div>
 			<div id="frd">
 				<div class="boxinfo">
-					<h2>Lorem</h2>
+					<h2 class="title">Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -65,7 +102,7 @@
 			</figure>
 			<div id="fld">
 				<div class="boxinfo">
-					<h2>Lorem</h2>
+					<h2 class="title">Lorem</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -79,25 +116,24 @@
 	<footer>
 		<h3>Todos os direitos reservados 2XXX©</h3>
 		<div id="img">
-			<div id="placeh1" class="ui black bottom pointing label">@ToLIBRAS</div>
-			<div id="placeh2" class="ui black bottom pointing label">@ToLIBRAS</div>
-			<div id="placeh3" class="ui black bottom pointing label">/ToLIBRAS</div>
 			<a href="https://instagram.com/ToLIBRAS">
-				<picture id="insta" onmouseover="placeholder(this,1)" onmouseout="placeholder(this,0)">
+				<picture id="insta">
 					<img src="imagens/insta.svg" alt="">
 				</picture>
 			</a>
 			<a href="https://twitter.com/ToLIBRAS">
-				<picture id="twitter" onmouseover="placeholder(this,1)" onmouseout="placeholder(this,0)">
+				<picture id="twitter">
 					<img src="imagens/twitter.svg" alt="">
 				</picture>
 			</a>
 			<a href="https://facebook.com/ToLIBRAS">
-				<picture id="face" onmouseover="placeholder(this,1)" onmouseout="placeholder(this,0)">
+				<picture id="face">
 					<img src="imagens/face.svg" alt="">
 				</picture>
 			</a>
 		</div>
 	</footer>
 </body>
+<!-- Js -->
+<script src="Js/main.js"></script>
 </html>

@@ -1,76 +1,54 @@
-function fixarHead() {
-  var posy = pageYOffset;
-  var head = document.getElementById("head");
-  	if(screen.width >= 1281 && screen.width <= 1500){
-  		if(posy>=710){
-  			head.style.visibility = "visible";
-  		}
-  		else{
-  			head.style.visibility = "hidden";
-  		}
-	}
-	else if(screen.width >=1750 && screen.width <=1920){
-		if(posy>=652){
-  			head.style.visibility = "visible";
-  		}
-  		else{
-  			head.style.visibility = "hidden";
-  		}
-	}
-	else if(screen.width <=1280){
-		if(posy>=665){
-  			head.style.visibility = "visible";
-  		}
-  		else{
-  			head.style.visibility = "hidden";
-  		}
-	}
-}
-function placeholder(img,num){
-	var ph = null;
-	var x = $(img).position();
-	console.log(x.top);
-	console.log(x.left);
-	if(num == 1){
-		if(img.id == "insta"){
-			ph = document.getElementById("placeh1");
-			ph.style.display = "block";
-			ph.style.position = "absolute";
-			ph.style.top = (x.top-50)+"px";
-			ph.style.left = (x.left-12)+"px";
-			ph.style.visibility = "visible";
-			
-		}
-		else if(img.id == "face"){
-			ph = document.getElementById("placeh3");
-			ph.style.display = "block";
-			ph.style.position = "absolute";
-			ph.style.top = (x.top-50)+"px";
-			ph.style.left = (x.left-12)+"px";
-			ph.style.visibility = "visible";		
-		}
-		else if(img.id == "twitter"){
-			ph = document.getElementById("placeh2");
-			ph.style.display = "block";
-			ph.style.position = "absolute";
-			ph.style.top = (x.top-50)+"px";
-			ph.style.left = (x.left-10)+"px";
-			ph.style.visibility = "visible";
-		}
-	}
-	else{
-		if(img.id == "insta"){
-			ph = document.getElementById("placeh1");
-			ph.style.visibility = "hidden";
-		}
-		else if(img.id == "face"){
-			ph = document.getElementById("placeh3");
-			ph.style.visibility = "hidden";
-		}
-		else if(img.id == "twitter"){
-			ph = document.getElementById("placeh2");
-			ph.style.visibility = "hidden";
+/*   Paginicial   */
+var slider = document.getElementsByClassName("scroll")[0];
+  let isDown = false;
+  let startY;
+  let startX;
+  let scrollTop;
+  let scrollLeft;
 
-		}
-	}
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startY = e.pageY - slider.offsetTop;
+    // startX = e.pageX - slider.offsetLeft;
+    scrollTop = slider.scrollTop;
+    // scrollLeft = slider.scrollLeft;
+    console.log(scrollTop);
+  });
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const y = e.pageY - slider.offsetTop;
+    // const x = e.pageX - slider.offsetLeft;
+    const walk = y - startY;
+    // const walk1 = x -startX;
+    slider.scrollTop = scrollTop - walk;
+    // slider.scrollLeft = scrollLeft - walk1;
+    console.log(slider.scrollTop+" = "+scrollTop+" - "+walk);
+  });
+
+
+  function scala(event){
+  var drag = document.getElementById("drag");
+  var delta;
+    if (event.wheelDelta){
+      delta = event.wheelDelta;
+    }
+    else{
+      delta = -1 *event.deltaY;
+    }
+
+  if (delta < 0){
+      drag.style.transform = "scale("+0.5+","+0.5+")";
+      slider.style.height = 100+"%";
+    }
+    else if (delta > 0){
+      drag.style.transform = "scale("+1+","+1+")";
+      slider.style.height = 100+"%";
+    }
 }

@@ -23,6 +23,9 @@ section.home div{
 	margin-top: 30px;
 	padding-bottom: 15em;
 }
+div#page-modal{
+	display: none;
+}
 
 
 /* 	 Header	  */
@@ -43,7 +46,7 @@ header div,div#fakehead div{
 }
 header, div#fakehead{
 	background-color: #002D94;
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	justify-content: space-around;
 	color: white;
@@ -65,7 +68,7 @@ div.boxinfo{
 section.scrollhome figure{
 	text-align: center;
 }
-section.scrollhome p{
+.boxinfo p{
 	font-size: 25px;
 	font-weight: 600;
 }
