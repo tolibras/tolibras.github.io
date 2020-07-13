@@ -3396,7 +3396,7 @@ button.dropdown-item {
     .modal-card {
       margin: 0 auto;
       max-height: calc(100vh - 40px);
-      width: 640px; } }
+      width: 30em; } }
 
 .modal-close {
   background: none;
@@ -3419,7 +3419,7 @@ button.dropdown-item {
   background-color: whitesmoke;
   display: flex;
   flex-shrink: 0;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 20px;
   position: relative; }
 

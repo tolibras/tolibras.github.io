@@ -75,6 +75,10 @@ section.scrollhome figure{
 section.scrollhome h2{
 	font-size: 40px;
 }
+div.modal-card a{
+	text-decoration: underline;
+	color:#8C8C8C;
+}
 
 /* 	 Butões	  */
 header button.login, header button.cadastro, div#fakehead button.login,div#fakehead button.cadastro{

@@ -24,8 +24,9 @@ section.home div{
 div#page-modal{
 	display: none;
 }
-.modal-card{
-	width: 30em !important;
+div.modal-card a{
+	text-decoration: underline;
+	color:#8C8C8C;
 }
 
 

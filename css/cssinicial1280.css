@@ -21,6 +21,10 @@ section.home div{
 	margin-top: 30px;
 	padding-bottom: 17em;
 }
+div.modal-card a{
+	text-decoration: underline;
+	color:#8C8C8C;
+}
 
 
 /* 	 Header	  */
