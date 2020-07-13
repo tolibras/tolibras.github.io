@@ -46,13 +46,13 @@ function fixarHead() {
     modal.childNodes[3].style.position = 'fixed';
     modal.childNodes[3].style.top = 25+'%';
     if(window.innerWidth <= 1920 && window.innerWidth >= 1750){
-      modal.childNodes[3].style.left = 34+'%';
+      modal.childNodes[3].style.left = 37.5+'%';
     }
     else if(window.innerWidth >= 1281 && window.innerWidth <= 1500){
-      modal.childNodes[3].style.left = 32+'%';
+      modal.childNodes[3].style.left = 33+'%';
     }
     else if(window.innerWidth < 1281){
-      modal.childNodes[3].style.left = 25+'%';
+      modal.childNodes[3].style.left = 31+'%';
     }
   }
   button[1].onclick = function(){
@@ -60,13 +60,13 @@ function fixarHead() {
     modal.childNodes[3].style.position = 'fixed';
     modal.childNodes[3].style.top = 25+'%';
     if(window.innerWidth <= 1920 && window.innerWidth >= 1750){
-      modal.childNodes[3].style.left = 34+'%';
+      modal.childNodes[3].style.left = 37.5+'%';
     }
     else if(window.innerWidth >= 1281 && window.innerWidth <= 1500){
-      modal.childNodes[3].style.left = 32+'%';
+      modal.childNodes[3].style.left = 33+'%';
     }
     else if(window.innerWidth < 1281){
-      modal.childNodes[3].style.left = 25+'%';
+      modal.childNodes[3].style.left = 31+'%';
     }
   }
   button[2].onclick = function(){
@@ -74,13 +74,13 @@ function fixarHead() {
     modal.childNodes[3].style.position = 'fixed';
     modal.childNodes[3].style.top = 25+'%';
     if(window.innerWidth <= 1920 && window.innerWidth >= 1750){
-      modal.childNodes[3].style.left = 34+'%';
+      modal.childNodes[3].style.left = 37.5+'%';
     }
     else if(window.innerWidth >= 1281 && window.innerWidth <= 1500){
-      modal.childNodes[3].style.left = 32+'%';
+      modal.childNodes[3].style.left = 33+'%';
     }
     else if(window.innerWidth < 1281){
-      modal.childNodes[3].style.left = 25+'%';
+      modal.childNodes[3].style.left = 31+'%';
     }
   }
   close.onclick = function(){
