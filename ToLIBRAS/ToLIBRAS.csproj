@@ -398,6 +398,8 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Index\Registro.cshtml" />
+    <Content Include="Views\Index\Revisão.cshtml" />
+    <Content Include="Views\Index\Atividades.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

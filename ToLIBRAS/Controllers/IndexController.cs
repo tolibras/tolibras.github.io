@@ -13,7 +13,21 @@ namespace ToLIBRAS.Controllers
         {
             return View();
         }
+
+        // GET: Registro
         public ActionResult Registro ()
+        {
+            return View();
+        }
+
+        // GET: Atividades
+        public ActionResult Atividades ()
+        {
+            return View();
+        }
+
+        // GET: Revisão
+        public ActionResult Revisão ()
         {
             return View();
         }
