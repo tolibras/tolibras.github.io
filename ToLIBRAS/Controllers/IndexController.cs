@@ -13,5 +13,9 @@ namespace ToLIBRAS.Controllers
         {
             return View();
         }
+        public ActionResult Registro ()
+        {
+            return View();
+        }
     }
 }
