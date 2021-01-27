@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\ToLIBRAS",
-    "\\ToLIBRAS\\Controllers"
+    "\\ToLIBRAS\\Controllers",
+    "\\ToLIBRAS\\Views",
+    "\\ToLIBRAS\\Views\\Index"
   ],
-  "SelectedNode": "\\ToLIBRAS\\Controllers\\IndexController.cs",
+  "SelectedNode": "\\ToLIBRAS\\Views\\Index\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
