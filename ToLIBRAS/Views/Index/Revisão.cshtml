@@ -31,7 +31,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img id="logo" src="~/Content/img/logo.png" alt="" cap></a>
+                    <a class="navbar-brand logo_h" href="@Url.Action("Index")"><img id="logo" src="~/Content/img/logo.png" alt="" cap></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
@@ -41,9 +41,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="#quemsomos">Quem Somos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.html">Atividades</a></li>
-                            <li class="nav-item"><a class="nav-link" href="atividades.html">Baralhos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("Index")">Quem Somos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("Revisão")">Atividades</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@Url.Action("Atividades")">Baralhos</a></li>
                             <li class="nav-item"><a class="nav-link" href="#formcontato">Contato</a></li>
                             <li class="nav-item">
                                 <button id="btn_form"><img id="userconta" src="~/Content/img/elements/user.png" width="45em"></button>
@@ -54,9 +54,9 @@
                                     <label id="loginn" for="senha_cad">Senha</label>
                                     <input id="senha_cad" class="loginn" name="senha_cad" style="width: 7em" required="required" type="password" placeholder="ex. 1234" />
                                     <br>
-                                    <a id="adicional" href="index.html">Esqueceu sua senha?</a>
+                                    <a id="adicional" href="@Url.Action("Index")">Esqueceu sua senha?</a>
                                     <br>
-                                    <a id="adicional" href="registro.html">Cadastre-se</a>
+                                    <a id="adicional" href="@Url.Action("Registro")">Cadastre-se</a>
                                     <br>
                                     <input id="enviarlogin" type="submit">
                                 </form>
