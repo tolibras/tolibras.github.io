@@ -50,5 +50,10 @@ namespace ToLIBRAS.Controllers
             return View(context.Users.OrderBy(c => c.username));
         }
 
+        // GET: Perfil
+        public ActionResult Perfil()
+        {
+            return View();
+        }
     }
 }

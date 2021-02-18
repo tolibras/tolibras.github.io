@@ -5197,3 +5197,137 @@ input.arearevisao {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*USER------------------------------------------------------------------------------------------------------------------------------*/
+section#bannerdouser {
+    height: 40em;
+    background-image: none;
+}
+
+div#divuser {
+    border: 2px solid #0084FF;
+    border-radius: 15px;
+    text-align: center;
+    padding: 2.7em;
+    position: relative;
+    right: 6em;
+    margin-top: 3em;
+}
+
+.botaouser {
+    border-radius: 15px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    color: white;
+}
+
+input.botaouser {
+    background-color: #01D9A8;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+h5#nomeuser {
+    padding-top: 1.5em;
+}
+
+button#botaodelet {
+    background-color: #FF004C;
+    opacity: 50%;
+    padding-right: 1.7em;
+    padding-left: 1.7em;
+}
+
+button#botaoat {
+    background-color: #DCDCDC;
+    color: gray;
+}
+
+img#userimg {
+    height: 10em;
+}
+
+button#editimg {
+    background-color: transparent;
+    border: none;
+}
+
+img#imgdobotao {
+    height: 3.5em;
+    position: absolute;
+    right: 4em;
+    top: 9em;
+}
+
+label.userr {
+    color: black;
+    position: relative;
+    top: 21px;
+    left: 15px;
+    padding: 0.2em;
+    padding-bottom: 0em;
+    background-color: white;
+}
+
+label.user {
+    color: black;
+    position: relative;
+    top: 21px;
+    left: 15px;
+    background-color: white;
+    padding: 0.2em;
+    padding-bottom: 0em;
+}
+
+input.txtareauser {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    padding: 0.4em;
+    color: #0084FF;
+    text-align: center;
+    height: 2.5em;
+}
+
+textarea:focus, input.txtarea:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border-color: white;
+    outline: 0;
+    background-color: #0788ff;
+    color: white;
+}
+
+div#dateuser {
+    margin-left: 3.5em;
+}
+
+img#nivel {
+    height: 5em;
+}
+
+div#niveluser {
+    display: flex;
+    text-align: center;
+    height: 7em;
+    padding: 1.7em;
+    padding-left: 1.5em;
+    width: 20em;
+    position: relative;
+    top: -7.5em;
+    right: -40em;
+}
+
+h5#h5donivel {
+    position: relative;
+    top: 1.8em;
+    padding-left: 1em;
+}
+
+section.formuser {
+    position: relative;
+    top: 1.5em;
+    left: 7em;
+}

@@ -203,6 +203,8 @@
     <Content Include="Content\img\testimonial\t2.jpg" />
     <Content Include="Content\img\testimonial\t3.jpg" />
     <Content Include="Content\img\testimonial\t4.jpg" />
+    <Content Include="Content\img\user\edit.png" />
+    <Content Include="Content\img\user\user.png" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\contact.js" />
     <Content Include="Content\js\countdown.js" />
@@ -415,6 +417,7 @@
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Views\Index\Alo.cshtml" />
+    <Content Include="Views\Index\Perfil.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

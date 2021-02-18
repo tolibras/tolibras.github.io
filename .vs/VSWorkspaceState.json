@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ToLIBRAS",
+    "\\ToLIBRAS\\Controllers",
+    "\\ToLIBRAS\\Views",
+    "\\ToLIBRAS\\Views\\Index"
   ],
+  "SelectedNode": "\\ToLIBRAS.sln",
   "PreviewInSolutionExplorer": false
 }
