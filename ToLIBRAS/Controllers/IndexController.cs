@@ -24,12 +24,28 @@ namespace ToLIBRAS.Controllers
             return View();
         }
 
+        // GET: Registro
+        public ActionResult Registro1()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Registro1(User u)
+        {
+            context.Users.Add(u);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         // POST: Registro
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Registro (User u)
         {
             context.Users.Add(u);
+            context.SaveChanges();
             return RedirectToAction("Index");
         }
 

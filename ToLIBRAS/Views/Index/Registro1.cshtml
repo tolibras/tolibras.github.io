@@ -1,0 +1,44 @@
+﻿@model ToLIBRAS.Models.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <main id="retangulo_img">
+        <section class="container">
+            <!-- ALTERAÇÕES: "w-50 mx-auto" -->
+            <div id="registrotolib" class="row py-3 w-75 mx-auto registrosection">
+                <label id="título" class="col-12 text-center pb-3" for="registro_retangulo">Cadastro</label>
+                @using (Html.BeginForm("Registro", "Index", FormMethod.Post, new { @class = "d-flex justify-content-center flex-column col-12", @id = "registro_retangulo" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-md-4 mr-5">
+                            @Html.LabelFor(model => model.username, "Nome de usuário",htmlAttributes: new { @class = "formregistro" })
+                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control arearevisao" } })
+                            @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            @Html.LabelFor(model => model.email, "Email", htmlAttributes: new { @class = "formregistro" })
+                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control arearevisao" } })
+                            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-md-4 mr-5" id="abc">
+                            @Html.LabelFor(model => model.pwser, "Senha", htmlAttributes: new { @class = "formregistro" })
+                            @Html.EditorFor(model => model.pwser, new { htmlAttributes = new { @class = "form-control arearevisao" } })
+                            @Html.ValidationMessageFor(model => model.pwser, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-row justify-content-end">
+                        <button type="submit" id="registre" class="btn btn-light border border-dark mr-5">Registre-se</button>
+                    </div>
+                }
+            </div>
+        </section>
+    </main>
