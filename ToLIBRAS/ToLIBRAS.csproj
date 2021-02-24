@@ -411,14 +411,14 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Index\Registro.cshtml" />
     <Content Include="Views\Index\Revisão.cshtml" />
     <Content Include="Views\Index\Atividades.cshtml" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Views\Index\Alo.cshtml" />
+    <Content Include="Views\Index\Registro.cshtml" />
     <Content Include="Views\Index\Perfil.cshtml" />
-    <Content Include="Views\Index\Registro1.cshtml" />
+    <Content Include="Views\Index\Editar1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -5224,6 +5224,18 @@ div#divuser {
     padding-left: 2em;
     color: white;
 }
+#botaoat {
+    border-radius: 15px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color: white;
+}
 
 input.botaouser {
     background-color: #01D9A8;
@@ -5235,13 +5247,24 @@ h5#nomeuser {
     padding-top: 1.5em;
 }
 
-button#botaodelet {
+button#botaodelet{
     background-color: #FF004C;
     opacity: 50%;
     padding-right: 1.7em;
     padding-left: 1.7em;
 }
-
+a#botaodelet {
+    background-color: #FF004C;
+    opacity: 50%;
+    padding-right: 1.7em;
+    padding-left: 1.7em;
+    padding-top: 0.76em;
+    padding-bottom: 0.76em;
+    font-weight: normal;
+}
+a#botaodelet:hover {
+    color: white;
+}
 button#botaoat {
     background-color: #DCDCDC;
     color: gray;
@@ -5309,15 +5332,11 @@ img#nivel {
 }
 
 div#niveluser {
-    display: flex;
     text-align: center;
     height: 7em;
     padding: 1.7em;
     padding-left: 1.5em;
-    width: 20em;
-    position: relative;
-    top: -7.5em;
-    right: -40em;
+    padding-top: 7em;
 }
 
 h5#h5donivel {

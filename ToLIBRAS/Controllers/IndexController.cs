@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ToLIBRAS.Context;
 using ToLIBRAS.Models;
+using System.Data.Entity;
 
 namespace ToLIBRAS.Controllers
 {
@@ -17,26 +18,10 @@ namespace ToLIBRAS.Controllers
         {
             return View();
         }
-
         // GET: Registro
-        public ActionResult Registro ()
+        public ActionResult Registro()
         {
             return View();
-        }
-
-        // GET: Registro
-        public ActionResult Registro1()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Registro1(User u)
-        {
-            context.Users.Add(u);
-            context.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         // POST: Registro
@@ -65,11 +50,31 @@ namespace ToLIBRAS.Controllers
         {
             return View(context.Users.OrderBy(c => c.username));
         }
-
         // GET: Perfil
         public ActionResult Perfil()
         {
-            return View();
+            return View(context.Users.First());
+        }
+        // GET: Delete
+        public ActionResult Delete(int id)
+        {
+            User usuario = context.Users.Find(id);
+            context.Users.Remove(usuario);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        // POST: Editar
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(User usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(usuario).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(usuario);
         }
     }
 }
