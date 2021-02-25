@@ -30,7 +30,7 @@
                     <div class="form-row justify-content-center">
                         <div class="form-group col-md-4 mr-5" id="abc">
                             @Html.LabelFor(model => model.pwser, "Senha", htmlAttributes: new { @class = "formregistro" })
-                            @Html.EditorFor(model => model.pwser, new { htmlAttributes = new { @class = "form-control arearevisao" } })
+                            @Html.EditorFor(model => model.pwser, new { htmlAttributes = new { @class = "form-control arearevisao", @type = "password" } })
                             @Html.ValidationMessageFor(model => model.pwser, "", new { @class = "text-danger" })
                         </div>
                     </div>

@@ -31,7 +31,7 @@ namespace ToLIBRAS.Controllers
         {
             context.Users.Add(u);
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Perfil");
         }
 
         // GET: Atividades
@@ -53,7 +53,7 @@ namespace ToLIBRAS.Controllers
         // GET: Perfil
         public ActionResult Perfil()
         {
-            return View(context.Users.First());
+            return View(context.Users.Last());
         }
         // GET: Delete
         public ActionResult Delete(int id)
@@ -72,7 +72,7 @@ namespace ToLIBRAS.Controllers
             {
                 context.Entry(usuario).State = EntityState.Modified;
                 context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Perfil");
             }
             return View(usuario);
         }

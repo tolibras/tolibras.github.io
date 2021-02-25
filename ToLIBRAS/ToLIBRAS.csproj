@@ -418,7 +418,6 @@
     <Content Include="Views\Index\Alo.cshtml" />
     <Content Include="Views\Index\Registro.cshtml" />
     <Content Include="Views\Index\Perfil.cshtml" />
-    <Content Include="Views\Index\Editar1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
