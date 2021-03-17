@@ -46,14 +46,10 @@ namespace ToLIBRAS.Controllers
             return View();
         }
 
-        public ActionResult Alo()
-        {
-            return View(context.Users.OrderBy(c => c.username));
-        }
         // GET: Perfil
         public ActionResult Perfil()
         {
-            return View(context.Users.Last());
+            return View(context.Users.First());
         }
         // GET: Delete
         public ActionResult Delete(int id)
