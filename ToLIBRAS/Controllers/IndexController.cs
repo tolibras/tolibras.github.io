@@ -3,15 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using ToLIBRAS.Context;
-using ToLIBRAS.Models;
 using System.Data.Entity;
+using Servico.Tabelas;
+using Modelo.Tabelas;
+using System.Net;
 
 namespace ToLIBRAS.Controllers
 {
     public class IndexController : Controller
     {
-        public Conexao context = new Conexao();
+        private UserServico userServico = new UserServico();
+        private ActionResult ObterVisaoUserPeloId(int? id)
+        {
+            if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            User u = userServico.ObterUserPeloId((int)id);
+            if (u == null) return HttpNotFound();
+            return View(u);
+        }
+        private ActionResult GravarUser(User u)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    userServico.GravarUser(u);
+                    return RedirectToAction("Perfil");
+                }
+                return View(u);
+            }
+            catch
+            {
+                return View(u);
+            }
+        }
 
         // GET: Index
         public ActionResult Index()
@@ -29,9 +53,7 @@ namespace ToLIBRAS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Registro (User u)
         {
-            context.Users.Add(u);
-            context.SaveChanges();
-            return RedirectToAction("Perfil");
+            return GravarUser(u);
         }
 
         // GET: Atividades
@@ -47,30 +69,30 @@ namespace ToLIBRAS.Controllers
         }
 
         // GET: Perfil
-        public ActionResult Perfil()
+        public ActionResult Perfil(int? id)
         {
-            return View(context.Users.First());
+            return ObterVisaoUserPeloId(id);
         }
-        // GET: Delete
-        public ActionResult Delete(int id)
+        // POST: Delete
+        public ActionResult Delete(int id, FormCollection collection)
         {
-            User usuario = context.Users.Find(id);
-            context.Users.Remove(usuario);
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                User u = userServico.DesativarUser(id);
+                TempData["Message"] = "Usuario " + u.username.ToUpper() + " foi desativado";
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
         // POST: Editar
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(User usuario)
         {
-            if (ModelState.IsValid)
-            {
-                context.Entry(usuario).State = EntityState.Modified;
-                context.SaveChanges();
-                return RedirectToAction("Perfil");
-            }
-            return View(usuario);
+            return GravarUser(usuario);
         }
     }
 }

@@ -412,3 +412,10 @@ C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\EntityFramework.dll
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\EntityFramework.SqlServer.dll
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\EntityFramework.xml
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\EntityFramework.SqlServer.xml
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Modelo.dll
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Servico.dll
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Persistencia.dll
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Modelo.pdb
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Servico.pdb
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Persistencia.pdb
+C:\Users\chris\source\repos\tolibras.github.io\ToLIBRAS\bin\Persistencia.dll.config
