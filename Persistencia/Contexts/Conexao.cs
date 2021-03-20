@@ -15,6 +15,10 @@ namespace Persistencia.Contexts
             Database.SetInitializer<Conexao>(new DropCreateDatabaseIfModelChanges<Conexao>());
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Adm> Adms { get; set; }
+        public DbSet<Grupo_Users> Grupos_Users { get; set; }
+        public DbSet<Atividade> Atividades { get; set; }
+        public DbSet<Questao> Questaos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

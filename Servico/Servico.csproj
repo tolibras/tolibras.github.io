@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tabelas\GrupoServico.cs" />
     <Compile Include="Tabelas\UserServico.cs" />
   </ItemGroup>
   <ItemGroup>
