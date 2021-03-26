@@ -46,7 +46,6 @@
     <Compile Include="Tabelas\Atividade.cs" />
     <Compile Include="Tabelas\Grupo_Users.cs" />
     <Compile Include="Tabelas\Questao.cs" />
-    <Compile Include="Tabelas\User.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
