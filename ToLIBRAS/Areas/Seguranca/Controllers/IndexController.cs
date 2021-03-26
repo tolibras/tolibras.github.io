@@ -7,16 +7,16 @@ using System.Data.Entity;
 using Servico.Tabelas;
 using Modelo.Tabelas;
 using System.Net;
+using ToLIBRAS.Areas.Seguranca.Models;
 
 namespace ToLIBRAS.Controllers
 {
     public class IndexController : Controller
     {
-        private UserServico userServico = new UserServico();
         private ActionResult ObterVisaoUserPeloId(int? id)
         {
             if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            User u = userServico.ObterUserPeloId((int)id);
+            User u = new User(); //= userServico.ObterUserPeloId((int)id);
             if (u == null) return HttpNotFound();
             return View(u);
         }
@@ -24,11 +24,11 @@ namespace ToLIBRAS.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                /*if (ModelState.IsValid)
                 {
                     userServico.GravarUser(u);
                     return RedirectToAction("Perfil");
-                }
+                }*/
                 return View(u);
             }
             catch
@@ -78,8 +78,8 @@ namespace ToLIBRAS.Controllers
         {
             try
             {
-                User u = userServico.DesativarUser(id);
-                TempData["Message"] = "Usuario " + u.username.ToUpper() + " foi desativado";
+                User u = null; //userServico.DesativarUser(id);
+                TempData["Message"] = "Usuario " + u.UserName.ToUpper() + " foi desativado";
                 return RedirectToAction("Index");
             }
             catch

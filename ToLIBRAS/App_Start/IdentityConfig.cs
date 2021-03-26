@@ -9,14 +9,14 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 
-namespace ToLIBRAS.App_Start
+namespace ToLIBRAS
 {
     public class IdentityConfig
     {
         public void Configuration(IAppBuilder app)
         {
-            app.CreatePerOwinContext<GerenciadorUser>(GerenciadorUser.Create);
             app.CreatePerOwinContext<IdentityDbContextAplicacao>(IdentityDbContextAplicacao.Create);
+            app.CreatePerOwinContext<GerenciadorUser>(GerenciadorUser.Create);
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,

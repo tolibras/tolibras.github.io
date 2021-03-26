@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tabelas\Adm.cs" />
     <Compile Include="Tabelas\Atividade.cs" />
     <Compile Include="Tabelas\Grupo_Users.cs" />
     <Compile Include="Tabelas\Questao.cs" />

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Modelo.Tabelas;
 using Servico.Tabelas;
+using ToLIBRAS.Areas.Seguranca.Models;
 
 namespace ToLIBRAS.Controllers
 {

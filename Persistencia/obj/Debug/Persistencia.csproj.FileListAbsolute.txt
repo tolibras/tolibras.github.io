@@ -12,3 +12,17 @@ C:\Users\chris\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistenc
 C:\Users\chris\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\chris\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\chris\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\Modelo.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.xml
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\christiancaua\Desktop\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete

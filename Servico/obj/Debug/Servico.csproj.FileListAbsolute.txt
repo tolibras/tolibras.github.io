@@ -12,3 +12,17 @@ C:\Users\chris\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.csproj.
 C:\Users\chris\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.csproj.CopyComplete
 C:\Users\chris\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.dll
 C:\Users\chris\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Servico.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Servico.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Modelo.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Persistencia.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\EntityFramework.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Modelo.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Persistencia.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\Persistencia.dll.config
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\bin\Debug\EntityFramework.xml
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\obj\Debug\Servico.csprojAssemblyReference.cache
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\obj\Debug\Servico.csproj.CoreCompileInputs.cache
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\obj\Debug\Servico.csproj.CopyComplete
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\obj\Debug\Servico.dll
+C:\Users\christiancaua\Desktop\tolibras.github.io\Servico\obj\Debug\Servico.pdb
