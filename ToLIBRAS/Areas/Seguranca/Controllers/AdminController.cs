@@ -35,7 +35,9 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
         { 
             return View(); 
         }
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Registro(UsuarioViewModel model)
         {
             if (ModelState.IsValid)
