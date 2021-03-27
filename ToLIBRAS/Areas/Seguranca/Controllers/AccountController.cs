@@ -51,14 +51,17 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                     ClaimsIdentity ident = UserManager.CreateIdentity(user,
                     DefaultAuthenticationTypes.ApplicationCookie);
                     AuthManager.SignOut();
-                    AuthManager.SignIn(new AuthenticationProperties
-                    { IsPersistent = false }, ident);
-                    if (returnUrl == null)
-                        returnUrl = "/Index/Index";
+                    AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
+                    if (returnUrl == null) returnUrl = "/Index/Admin";
                     return Redirect(returnUrl);
                 }
             }
             return View(details);
+        }
+        public ActionResult Logout()
+        {
+            AuthManager.SignOut();
+            return RedirectToAction("Index", "Admin", new { area = "Seguranca" });
         }
     }
 }
