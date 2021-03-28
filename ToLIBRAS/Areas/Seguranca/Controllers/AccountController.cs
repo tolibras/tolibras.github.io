@@ -52,7 +52,7 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                     DefaultAuthenticationTypes.ApplicationCookie);
                     AuthManager.SignOut();
                     AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
-                    if (returnUrl == null) returnUrl = "/Index/Admin";
+                    if (returnUrl == null) returnUrl = "/Seguranca/Admin/Index";
                     return Redirect(returnUrl);
                 }
             }

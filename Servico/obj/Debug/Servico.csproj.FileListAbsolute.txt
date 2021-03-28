@@ -40,3 +40,16 @@ C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Servico\obj\Debug\Servic
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Servico\obj\Debug\Servico.csproj.CopyComplete
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Servico\obj\Debug\Servico.dll
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Servico\obj\Debug\Servico.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Servico.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Servico.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Modelo.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Persistencia.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\EntityFramework.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Modelo.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Persistencia.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\Persistencia.dll.config
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\bin\Debug\EntityFramework.xml
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.csprojAssemblyReference.cache
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.csproj.CopyComplete
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Servico\obj\Debug\Servico.pdb

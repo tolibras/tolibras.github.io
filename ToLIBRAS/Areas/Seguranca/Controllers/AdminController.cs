@@ -7,6 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 using ToLIBRAS.Areas.Seguranca.Models;
 using ToLIBRAS.Infraestrutura;
+using System.Web.Security;
+using System.Threading.Tasks;
+using System.Security.Principal;
 
 namespace ToLIBRAS.Areas.Seguranca.Controllers
 {
@@ -48,10 +51,52 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                     Email = model.Email
                 };
                 IdentityResult result = GerenciadorUser.Create(user, model.Senha);
-                if (result.Succeeded) return RedirectToAction("Index");
+                if (result.Succeeded) return RedirectToAction("Atividades");
                 else AddErrorsFromResult(result);
             }
             return View(model);
         }
+        public ActionResult Atividades()
+        {
+            return View();
+        }
+        public ActionResult Revisão()
+        {
+            return View();
+        }
+        // GET: Perfil
+       public ActionResult Perfil(string name)
+        {
+            var u = GerenciadorUser.FindByName(name);
+            User user = new User
+            {
+                Id = u.Id,
+                UserName = u.UserName,
+                Email = u.Email
+            };
+            return View(user);
+        }
+        /* // GET: Delete
+        public ActionResult Delete(int id)
+        {
+            User usuario = context.Users.Find(id);
+            context.Users.Remove(usuario);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        // POST: Editar
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(User usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Entry(usuario).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Perfil");
+            }
+            return View(usuario);
+        }
+        */
     }
 }

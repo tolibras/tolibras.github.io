@@ -1,5 +1,4 @@
 ﻿@using ToLIBRAS.Infraestrutura
-@model ToLIBRAS.Areas.Seguranca.Models.LoginViewModel
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,14 +44,23 @@
                                 @{
                                     if (Html.GetAuthenticatedUser().ToString() != "")
                                     {
-                                        <span>Olá, </span>
-                                        @Html.GetAuthenticatedUser();
-                                        @Html.ActionLink(" - Sair", "Logout", "Account")
+                                        <form id="my_form">
+                                            <span>Olá, </span>
+                                            @Html.GetAuthenticatedUser();
+                                            @Html.ActionLink(" - Sair", "Logout", "Account")
+                                            <br />
+                                            <ul>
+                                                <li>
+                                                    @Html.ActionLink("Perfil", "Perfil", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, null)
+                                                </li>
+                                            </ul>
+                                        </form>
                                     }
                                     else
                                     {
                                         using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "my_form" }))
                                         {
+                                            @Html.AntiForgeryToken()
                                             <div class="form-group">
                                                 @Html.LabelFor(model => model.Nome, htmlAttributes: new { @id = "loginn" })
                                                 <div class="col-md-10">
@@ -148,22 +156,34 @@
     </footer>
     <!--================ End footer Area  =================-->
     <!-- Optional JavaScript -->
+    <script type="text/javascript">
+        var btn = document.getElementById('btn_form');
+        var form = document.getElementById('my_form');
+
+        btn.addEventListener('click', function () {
+            if (form.style.display != 'block') {
+                form.style.display = 'block';
+                return;
+            }
+            form.style.display = 'none';
+        });
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/owl-carousel-thumb.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="vendors/counter-up/jquery.counterup.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="@Url.Content("~/Content/js/jquery-3.2.1.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/popper.js")"></script>
+    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/stellar.js")"></script>
+    <script src="@Url.Content("~/Content/js/countdown.js")"></script>
+    <script src="@Url.Content("~/Content/vendors/nice-select/js/jquery.nice-select.min.js")"></script>
+    <script src="@Url.Content("~/Content/vendors/owl-carousel/owl.carousel.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/owl-carousel-thumb.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/jquery.ajaxchimp.min.js")"></script>
+    <script src="@Url.Content("~/Content/vendors/counter-up/jquery.counterup.js")"></script>
+    <script src="@Url.Content("~/Content/js/mail-script.js")"></script>
     <!--gmaps Js-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="@Url.Content("~/Content/js/gmaps.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/theme.js")"></script>
     @RenderSection("ScriptPage", false);
 </body>
 </html>

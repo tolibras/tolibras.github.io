@@ -40,3 +40,16 @@ C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Persistencia\obj\Debug\P
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\55849\Source\Repos\tolibras\tolibras.github.io\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\Modelo.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.xml
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\laidy\source\repos\tolibras.github.io\Persistencia\obj\Debug\Persistencia.pdb
