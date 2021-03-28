@@ -76,27 +76,19 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
             };
             return View(user);
         }
-        /* // GET: Delete
-        public ActionResult Delete(int id)
-        {
-            User usuario = context.Users.Find(id);
-            context.Users.Remove(usuario);
-            context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        // POST: Editar
+        
+        //POST: Editar
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(User usuario)
         {
             if (ModelState.IsValid)
             {
-                context.Entry(usuario).State = EntityState.Modified;
-                context.SaveChanges();
-                return RedirectToAction("Perfil");
+                IdentityResult result = GerenciadorUser.Update(usuario);
+                if (result.Succeeded) return RedirectToAction("Perfil", usuario.UserName);
+                else AddErrorsFromResult(result);
             }
             return View(usuario);
         }
-        */
     }
 }

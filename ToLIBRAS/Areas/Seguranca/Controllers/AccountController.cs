@@ -63,5 +63,22 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
             AuthManager.SignOut();
             return RedirectToAction("Index", "Admin", new { area = "Seguranca" });
         }
+
+        // GET: Delete
+        public ActionResult Delete(string id)
+        {
+            User u = UserManager.FindById(id);
+            if (u != null)
+            {
+                IdentityResult result = UserManager.Delete(u);
+                if (result.Succeeded)
+                {
+                    AuthManager.SignOut();
+                    return RedirectToAction("Index");
+                }
+                else return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }
+            else return HttpNotFound();
+        }
     }
 }

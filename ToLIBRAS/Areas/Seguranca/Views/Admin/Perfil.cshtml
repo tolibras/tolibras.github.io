@@ -17,14 +17,14 @@
                     <h5 id="nomeuser">@Html.DisplayFor(model => model.UserName)</h5>
                     <input id="myButton" class="botaouser" type="submit" value="Editar meus dados"></input>
                     </br>
-                    @Html.ActionLink("Excluir minha conta", "Delete", new { id = Model.Id }, new { @class = "botaouser", @id = "botaodelet" })
+                    @Html.ActionLink("Excluir minha conta", "Delete", "Account", new { area = "Seguranca", id = Model.Id }, new { @class = "botaouser", @id = "botaodelet" })
                 </div>
 
 
 
                 <section id="formcontato" class="formuser">
                     <article class="artigo">
-                        @using (Html.BeginForm("Editar", "Index", FormMethod.Post, new { @class = "formulario", @id = "formcontato" }))
+                        @using (Html.BeginForm("Editar", "Admin", FormMethod.Post, new { @class = "formulario", @id = "formcontato" }))
                         {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -41,6 +41,12 @@
                                 <div class="form-groupp">
                                     <label class="user" for="email">E-mail</label>
                                     @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "myInput2", @name = "email", @size = "55", @type = "email" } })
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-groupp">
+                                    <label class="user" for="pswr">Senha</label>
+                                    @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "pswr", @name = "password", @size = "55", @type = "password" } })
                                 </div>
                             </div>
                             <div id="niveluser">
