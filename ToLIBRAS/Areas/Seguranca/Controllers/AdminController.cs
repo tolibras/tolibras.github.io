@@ -34,28 +34,6 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
         {
             return View();
         }
-        public ActionResult Registro()
-        { 
-            return View(); 
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Registro(UsuarioViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                User user = new User
-                {
-                    UserName = model.Nome,
-                    Email = model.Email
-                };
-                IdentityResult result = GerenciadorUser.Create(user, model.Senha);
-                if (result.Succeeded) return RedirectToAction("Atividades");
-                else AddErrorsFromResult(result);
-            }
-            return View(model);
-        }
         public ActionResult Atividades()
         {
             return View();
@@ -65,30 +43,24 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
             return View();
         }
         // GET: Perfil
-       public ActionResult Perfil(string name)
+        public ActionResult Perfil(string name)
         {
             var u = GerenciadorUser.FindByName(name);
-            User user = new User
+            UsuarioViewModel user = new UsuarioViewModel
             {
                 Id = u.Id,
-                UserName = u.UserName,
+                Nome = u.UserName,
                 Email = u.Email
             };
             return View(user);
         }
-        
-        //POST: Editar
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Editar(User usuario)
+        public ActionResult criarGrupo()
         {
-            if (ModelState.IsValid)
-            {
-                IdentityResult result = GerenciadorUser.Update(usuario);
-                if (result.Succeeded) return RedirectToAction("Perfil", usuario.UserName);
-                else AddErrorsFromResult(result);
-            }
-            return View(usuario);
+            return View();
+        }
+        public ActionResult listarGrupos()
+        {
+            return View();
         }
     }
 }

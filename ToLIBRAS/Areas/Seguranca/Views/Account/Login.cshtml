@@ -7,7 +7,7 @@
     <section class="container">
         <!-- ALTERAÇÕES: "w-50 mx-auto" -->
         <div id="registrotolib" class="row py-3 w-75 mx-auto registrosection">
-            <label id="título" class="col-12 text-center pb-3" for="registro_retangulo">Cadastro</label>
+            <label id="título" class="col-12 text-center pb-3" for="registro_retangulo">Login</label>
             @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "d-flex justify-content-center flex-column col-12", @id = "registro_retangulo" }))
             {
                 @Html.AntiForgeryToken()
@@ -33,9 +33,9 @@
                         @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
+                @Html.ActionLink("Eu não tenho conta", "Registro", "Account")
                 <div class="form-row justify-content-end">
-                    <button type="submit" id="registre" class="btn btn-light border border-dark mr-5">Registre-se</button>
+                    <button type="submit" id="registre" class="btn btn-light border border-dark mr-5">Logar</button>
                 </div>
             }
         </div>

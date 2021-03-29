@@ -1,4 +1,4 @@
-﻿@model ToLIBRAS.Areas.Seguranca.Models.User
+﻿@model ToLIBRAS.Areas.Seguranca.Models.UsuarioViewModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -14,17 +14,17 @@
                         <img id="userimg" src="~/Content/img/user/user.png">
                         <button id="editimg"><img id="imgdobotao" src="~/Content/img/user/edit.png"></button>
                     </div>
-                    <h5 id="nomeuser">@Html.DisplayFor(model => model.UserName)</h5>
+                    <h5 id="nomeuser">@Html.DisplayFor(model => model.Nome)</h5>
                     <input id="myButton" class="botaouser" type="submit" value="Editar meus dados"></input>
                     </br>
-                    @Html.ActionLink("Excluir minha conta", "Delete", "Account", new { area = "Seguranca", id = Model.Id }, new { @class = "botaouser", @id = "botaodelet" })
+                    @Html.ActionLink("Excluir minha conta", "Delete", "Account", new { id = Model.Id }, new { @class = "botaouser", @id = "botaodelet" })
                 </div>
 
 
 
                 <section id="formcontato" class="formuser">
                     <article class="artigo">
-                        @using (Html.BeginForm("Editar", "Admin", FormMethod.Post, new { @class = "formulario", @id = "formcontato" }))
+                        @using (Html.BeginForm("Editar", "Account", FormMethod.Post, new { @class = "formulario", @id = "formcontato" }))
                         {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -34,7 +34,7 @@
                             <div class="form-row">
                                 <div class="form-groupp h-50">
                                     <label class="userr" for="nome">Nome do usuário</label>
-                                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "myInput1", @name = "nome", @size = "55" } })
+                                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "myInput1", @name = "nome", @size = "55" } })
                                 </div>
                             </div>
                             <div class="form-row">
@@ -46,11 +46,11 @@
                             <div class="form-row">
                                 <div class="form-groupp">
                                     <label class="user" for="pswr">Senha</label>
-                                    @Html.EditorFor(model => model.PasswordHash, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "pswr", @name = "password", @size = "55", @type = "password" } })
+                                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "pswr", @name = "password", @size = "55", @type = "password" } })
                                 </div>
                             </div>
                             <div id="niveluser">
-                                <button id="botaoat" class="botaouser" disabled>Atualizar meus dados</button>
+                                <button type="submit" id="botaoat" class="botaouser" disabled>Atualizar meus dados</button>
                             </div>
                         </fieldset>
                         }

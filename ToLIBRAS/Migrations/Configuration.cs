@@ -9,9 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "ToLIBRAS.DAL.IdentityDbContextAplicacao";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(ToLIBRAS.DAL.IdentityDbContextAplicacao context)

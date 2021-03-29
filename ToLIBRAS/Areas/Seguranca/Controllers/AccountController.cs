@@ -14,6 +14,13 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
 {
     public class AccountController : Controller
     {
+        private void AddErrorsFromResult(IdentityResult result)
+        {
+            foreach (string error in result.Errors)
+            {
+                ModelState.AddModelError("", error);
+            }
+        }
         // Propriedades
         private IAuthenticationManager AuthManager
         {
@@ -41,7 +48,16 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = UserManager.Find(details.Nome, details.Senha);
+                User user;
+                try
+                {
+                    user = UserManager.Find(details.Nome, details.Senha);
+                }
+                catch
+                {
+                    user = null;
+                }
+                
                 if (user == null)
                 {
                     ModelState.AddModelError("", "Nome ou senha inválido(s).");
@@ -52,7 +68,7 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                     DefaultAuthenticationTypes.ApplicationCookie);
                     AuthManager.SignOut();
                     AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
-                    if (returnUrl == null) returnUrl = "/Seguranca/Admin/Index";
+                    if (returnUrl == null) returnUrl = "/Seguranca/Admin/Atividades";
                     return Redirect(returnUrl);
                 }
             }
@@ -74,11 +90,64 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                 if (result.Succeeded)
                 {
                     AuthManager.SignOut();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Admin");
                 }
                 else return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
             else return HttpNotFound();
+        }
+        public ActionResult Registro()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Registro(UsuarioViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = new User
+                {
+                    UserName = model.Nome,
+                    Email = model.Email
+                };
+                IdentityResult result = UserManager.Create(user, model.Senha);
+                if (result.Succeeded)
+                {
+                    User u = UserManager.Find(user.UserName, model.Senha);
+                    ClaimsIdentity ident = UserManager.CreateIdentity(u, DefaultAuthenticationTypes.ApplicationCookie);
+                    AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
+                    return RedirectToAction("Atividades", "Admin");
+                }
+                else AddErrorsFromResult(result);
+            }
+            return View(model);
+        }
+
+        //POST: Editar
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(UsuarioViewModel usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                User user = UserManager.FindById(usuario.Id);
+                user.UserName = usuario.Nome;
+                user.Email = usuario.Email;
+                user.PasswordHash = UserManager.PasswordHasher.HashPassword(usuario.Senha);
+
+                IdentityResult result = UserManager.Update(user);
+                if (result.Succeeded)
+                {
+                    ClaimsIdentity ident = UserManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                    AuthManager.SignOut();
+                    AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
+                    return RedirectToAction("Perfil", "Admin", new { name = user.UserName });
+                }
+                else AddErrorsFromResult(result);
+            }
+            return View(usuario);
         }
     }
 }

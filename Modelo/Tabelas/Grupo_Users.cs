@@ -8,5 +8,7 @@ namespace Modelo.Tabelas
 {
     public class Grupo_Users
     {
+        /*public UserViewModel idAdm { get;set; }
+        public Users { get; set; }*/
     }
 }

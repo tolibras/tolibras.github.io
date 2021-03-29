@@ -17,6 +17,7 @@ namespace ToLIBRAS
         {
             app.CreatePerOwinContext<IdentityDbContextAplicacao>(IdentityDbContextAplicacao.Create);
             app.CreatePerOwinContext<GerenciadorUser>(GerenciadorUser.Create);
+            app.CreatePerOwinContext<GerenciadorPapel>(GerenciadorPapel.Create);
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
