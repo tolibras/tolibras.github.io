@@ -567,5 +567,3 @@ C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\Microsoft.Owin.Secur
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\laidy\source\repos\tolibras.github.io\ToLIBRAS\bin\Newtonsoft.Json.xml
-C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.Migrations.InitialCreate.resources
-C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.csproj.GenerateResource.cache

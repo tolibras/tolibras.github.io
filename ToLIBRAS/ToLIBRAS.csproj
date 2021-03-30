@@ -326,6 +326,7 @@
     <Content Include="Areas\Seguranca\Views\Account\Registro.cshtml" />
     <Content Include="Areas\Seguranca\Views\Account\Login.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\criarGrupo.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\Grupos.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -420,11 +421,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AccountController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Seguranca\Models\Grupo.cs" />
     <Compile Include="Areas\Seguranca\Models\Papel.cs" />
     <Compile Include="Areas\Seguranca\Models\SegurancaViewModels.cs" />
     <Compile Include="Areas\Seguranca\Models\User.cs" />
     <Compile Include="Areas\Seguranca\SegurancaAreaRegistration.cs" />
     <Compile Include="Areas\Seguranca\Controllers\IndexController.cs" />
+    <Compile Include="DAL\GrupoContext.cs" />
     <Compile Include="DAL\IdentityDbContextAplicacao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -432,10 +435,6 @@
     <Compile Include="Infraestrutura\GerenciadorPapel.cs" />
     <Compile Include="Infraestrutura\GerenciadorUser.cs" />
     <Compile Include="Infraestrutura\IdentityHelpers.cs" />
-    <Compile Include="Migrations\202103291826315_InitialCreate.cs" />
-    <Compile Include="Migrations\202103291826315_InitialCreate.designer.cs">
-      <DependentUpon>202103291826315_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -494,11 +493,6 @@
       <Project>{e09233ad-c5b2-446c-ae8f-5bc3cb3a0544}</Project>
       <Name>Servico</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103291826315_InitialCreate.resx">
-      <DependentUpon>202103291826315_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

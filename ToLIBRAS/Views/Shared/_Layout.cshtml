@@ -75,7 +75,7 @@
                                                     @Html.ActionLink("Perfil", "Perfil", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, null)
                                                 </li>
                                                 <li>
-                                                    Grupos
+                                                    @Html.ActionLink("Grupos", "Grupos", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, null)
                                                 </li>
                                             </ul>
                                         </form>

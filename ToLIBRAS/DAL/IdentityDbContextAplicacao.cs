@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using ToLIBRAS.Areas.Seguranca.Models;
-using ToLIBRAS.Migrations;
+//using ToLIBRAS.Migrations;
 
 namespace ToLIBRAS.DAL
 {
@@ -14,7 +14,7 @@ namespace ToLIBRAS.DAL
         public IdentityDbContextAplicacao() : base("IdentityDb") { }
         static IdentityDbContextAplicacao()
         {
-            Database.SetInitializer<IdentityDbContextAplicacao>(new MigrateDatabaseToLatestVersion<IdentityDbContextAplicacao, Configuration>());
+            Database.SetInitializer<IdentityDbContextAplicacao>(new DropCreateDatabaseIfModelChanges<IdentityDbContextAplicacao>());
         }
         public static IdentityDbContextAplicacao Create()
         {

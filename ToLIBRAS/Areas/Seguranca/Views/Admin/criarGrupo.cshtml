@@ -1,4 +1,5 @@
-﻿
+﻿@model ToLIBRAS.Areas.Seguranca.Models.Grupo
+@using ToLIBRAS.Infraestrutura
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -8,23 +9,25 @@
         <!-- ALTERAÇÕES: "w-50 mx-auto" -->
         <div id="registrotolib" class="row py-3 w-75 mx-auto registrosection">
             <label id="título" class="col-12 text-center pb-3" for="registro_retangulo">Criação de grupo</label>
-            <form id="registro_retangulo" class="d-flex justify-content-center flex-column col-12">
+            @using (Html.BeginForm("criarGrupo", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, FormMethod.Post, new { @class = "d-flex justify-content-center flex-column col-12", @id = "registro_retangulo" }))
+            {
+
                 <div class="form-row justify-content-center">
                     <div class="form-group col-md-8">
                         <label id="gruponame" class="formregistro" for="inputUsername">Nome de grupo</label>
-                        <input type="text" class="form-control arearevisao" id="inputUsername">
+                        @Html.EditorFor(model => model.nome, new { htmlAttributes = new { @class = "form-control arearevisao", @id = "inputUsername" } })
                     </div>
                 </div>
                 <div class="form-row justify-content-center">
                     <div class="form-group col-md-8">
                         <label class="formregistro" for="area">Descrição do grupo</label>
-                        <textarea id="area" class="form-control border-dark" rows="5" style="resize: none;"></textarea>
+                        @Html.EditorFor(model => model.desc, new { htmlAttributes = new { @class = "form-control border-dark", @id = "area", @style = "resize: none;", @rows = "5" } })
                     </div>
                 </div>
                 <div class="form-row justify-content-end">
                     <button type="submit" id="registre" class="btn btn-light border border-dark mr-5">Criar grupo</button>
                 </div>
-            </form>
+            }
         </div>
     </section>
 </main>

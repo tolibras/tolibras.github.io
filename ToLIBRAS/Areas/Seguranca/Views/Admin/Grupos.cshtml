@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ToLIBRAS.Areas.Seguranca.Models.Grupo>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="MainDesc d-flex container py-4">
+    <div class="d-flex flex-column col-lg-9 px-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="3" scope="col" class="text-center"><h4>Membros</h4></th>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.id)</th>
+                    <th>@Html.DisplayNameFor(model => model.nome)</th>
+                    <td>Remover</td>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (var gp in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => gp.id)</td>
+                                <td>@Html.DisplayFor(modelItem => gp.nome)</td>
+                                <td><button class="btn botaodelet" type="button">Remover</button></td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">Você não participa em nenhum grupo.</td>
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+        </table>
+        @Html.ActionLink("Criar grupo", "criarGrupo", "Admin", new { area = "Seguranca" }, new { @class = "btn btn-primary" })
+    </div>
+</section>
