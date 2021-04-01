@@ -16,8 +16,8 @@ namespace ToLIBRAS.Areas.Seguranca
         {
             context.MapRoute(
                 "Seguranca_default",
-                "Seguranca/{controller}/{action}/{name}",
-                new { action = "Admin", name = UrlParameter.Optional }
+                "Seguranca/{controller}/{action}/{id}",
+                new { action = "Index", id = UrlParameter.Optional }
             );
         }
     }

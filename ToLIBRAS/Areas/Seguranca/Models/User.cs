@@ -8,6 +8,5 @@ namespace ToLIBRAS.Areas.Seguranca.Models
 {
     public class User : IdentityUser
     {
-        public List<Grupo> grupos { get; set; }
     }
 }
