@@ -327,6 +327,9 @@
     <Content Include="Areas\Seguranca\Views\Account\Login.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\criarGrupo.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\Grupos.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\GrupoDetails.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\MembrosDetails.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\AdmDetails.cshtml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />

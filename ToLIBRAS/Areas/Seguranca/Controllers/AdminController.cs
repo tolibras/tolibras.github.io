@@ -44,10 +44,14 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
         {
             return View();
         }
-        public ActionResult Grupos(string name)
+        /*public ActionResult Grupos(string name)
         {
             var u = GerenciadorUser.FindByName(name);
             return View(u.grupos);
+        }*/
+        public ActionResult Grupos()
+        {
+            return View();
         }
         public ActionResult criarGrupo()
         {
@@ -94,5 +98,18 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
         {
             return View();
         }
+        public ActionResult GrupoDetails()
+        {
+            return View();
+        }
+        public ActionResult MembrosDetails()
+        {
+            return View();
+        }
+        public ActionResult AdmDetails()
+        {
+            return View();
+        }
+
     }
 }

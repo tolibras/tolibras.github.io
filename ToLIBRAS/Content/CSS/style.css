@@ -5347,3 +5347,162 @@ section.formuser {
     top: 1.5em;
     left: 7em;
 }
+/*------------------------------------------------ PÁGINA DE GRUPO (LANAY) ------------------------------------------------*/
+h4#gruponome {
+    position: relative;
+    left: 2em;
+}
+
+aside#asidegrupo {
+    padding: 0.5em;
+    border: 2px solid gray;
+}
+
+ul#ulgrupo {
+    margin-top: 2em;
+}
+
+li#ligrupo {
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+li.ligrupo {
+    background-color: #01D9A8;
+}
+li.ligrupo2 {
+    background-color: #6C757E;
+}
+li.ligrupo2-ativo {
+    background-color: #0079FC;
+}
+
+li#lifimgrupo {
+    background-color: #DCDCDC;
+    color: gray;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 3em;
+    text-align: center;
+}
+
+.deletargrupo {
+    background-color: #FF004C;
+}
+
+li#ligrupo a {
+    color: white;
+    font-family:
+}
+
+li#lifimgrupo a {
+    color: gray;
+}
+
+h4#dadosgrupoh4 {
+    padding-top: 2em;
+}
+
+input#myInput1grupos {
+    height: 10em;
+}
+
+section#bannerdogrupo {
+    height: 40em;
+    background-image: none;
+}
+
+.botaoatgrupo {
+    border-radius: 15px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 0.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    position: relative;
+    right: 3.5em;
+}
+
+button#botaoatdogrupo {
+    background-color: #DCDCDC;
+    color: gray;
+}
+
+label.grupoo {
+    color: black;
+    position: relative;
+    top: 21px;
+    left: 15px;
+    padding: 0.2em;
+    padding-bottom: 0em;
+    background-color: white;
+}
+
+label.grupo {
+    color: black;
+    position: relative;
+    top: 21px;
+    left: 15px;
+    background-color: white;
+    padding: 0.2em;
+    padding-bottom: 0em;
+}
+
+input.txtareagrupo {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0.4em;
+    color: #0084FF;
+    text-align: center;
+    height: 2.5em;
+}
+
+textarea:focus, input.txtarea:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border-color: white;
+    outline: 0;
+    background-color: #0788ff;
+    color: white;
+}
+
+div#dategrupo {
+    margin-left: 3.5em;
+}
+
+div#nivelgrupo {
+    display: flex;
+    text-align: center;
+    height: 7em;
+    padding: 1.7em;
+    padding-left: 1.5em;
+    width: 20em;
+    position: relative;
+    top: -7.5em;
+    right: -40em;
+}
+
+section.formgrupo {
+    position: relative;
+    top: 1.5em;
+    left: 9em;
+}
+
+textarea#myInput3grupo {
+    border: 2px solid gray;
+    color: #0084FF;
+    padding-top: 0.7em;
+    border-radius: 10px;
+}
+
+    textarea:focus, textarea#myInput3grupo:focus, select:focus {
+        color: black;
+    }
+tr.dados{
+    color: black;
+}

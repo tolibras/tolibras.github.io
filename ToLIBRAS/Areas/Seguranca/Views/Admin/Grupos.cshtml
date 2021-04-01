@@ -5,6 +5,9 @@
 
 <section class="MainDesc d-flex container py-4">
     <div class="d-flex flex-column col-lg-9 px-5">
+        <div>
+
+        </div>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -32,7 +35,9 @@
                     else
                     {
                         <tr>
-                            <td colspan="3">Você não participa em nenhum grupo.</td>
+                            <td>1</td>
+                            <td>@Html.ActionLink("grupo exemplo", "GrupoDetails")</td>
+                            <td><button class="btn botaodelet" type="button">Remover</button></td>
                         </tr>
                     }
 
