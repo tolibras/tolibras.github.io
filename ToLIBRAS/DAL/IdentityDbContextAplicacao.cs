@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using ToLIBRAS.Areas.Seguranca.Models;
+using ToLIBRAS.Migrations;
 
 namespace ToLIBRAS.DAL
 {
@@ -14,14 +15,11 @@ namespace ToLIBRAS.DAL
         { }
         static IdentityDbContextAplicacao()
         {
-            Database.SetInitializer<IdentityDbContextAplicacao>(new IdentityDbInit());
+            Database.SetInitializer<IdentityDbContextAplicacao>(new MigrateDatabaseToLatestVersion<IdentityDbContextAplicacao, Configuration>());
         }
         public static IdentityDbContextAplicacao Create()
         {
             return new IdentityDbContextAplicacao();
-        }
-        public class IdentityDbInit : DropCreateDatabaseIfModelChanges<IdentityDbContextAplicacao>
-        {
         }
     }
 }

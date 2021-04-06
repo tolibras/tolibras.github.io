@@ -493,6 +493,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infraestrutura\GerenciadorUsuario.cs" />
+    <Compile Include="Migrations\202104012058272_InitialCreate.cs" />
+    <Compile Include="Migrations\202104012058272_InitialCreate.Designer.cs">
+      <DependentUpon>202104012058272_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -512,6 +517,11 @@
     <Folder Include="Areas\Seguranca\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104012058272_InitialCreate.resx">
+      <DependentUpon>202104012058272_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

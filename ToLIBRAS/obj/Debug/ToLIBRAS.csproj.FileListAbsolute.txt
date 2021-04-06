@@ -59,3 +59,5 @@ C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\bin\pt-br\Microsoft.A
 C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.csproj.CopyComplete
 C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.dll
 C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.pdb
+C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.Migrations.InitialCreate.resources
+C:\Users\christiancaua\Desktop\tolibras.github.io\ToLIBRAS\obj\Debug\ToLIBRAS.csproj.GenerateResource.cache
