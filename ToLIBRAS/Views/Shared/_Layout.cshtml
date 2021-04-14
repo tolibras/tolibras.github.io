@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ToLIBRAS.Infraestrutura
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Required meta tags -->
@@ -16,7 +17,6 @@
     <link rel="stylesheet" href="~/Content/vendors/animate-css/animate.css">
     <!-- main css -->
     <link rel="stylesheet" href="~/Content/CSS/style.css">
-    @RenderSection("styles", false);
 </head>
 <body>
     <!--================ Start Header Menu Area =================-->
@@ -25,7 +25,14 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href=""><img id="logo" src="~/Content/img/logo.png" alt="" cap></a>
+                    <a class="navbar-brand logo_h" href="@{
+                            if (Html.GetAuthenticatedUser().ToString() != "") {
+                                @Url.Action("Atividades", "Admin");
+                            }
+                            else {
+                                @Url.Action("Index", "Admin");
+                            }
+                    }"><img id="logo" src="~/Content/img/logo.png" alt="" cap></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
@@ -36,12 +43,48 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="#quemsomos">Quem Somos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Atividades</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Baralhos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@{
+                                if (Html.GetAuthenticatedUser().ToString() != "") {
+                                    @Url.Action("Atividades", "Admin");
+                                }
+                                else {
+                                    @Url.Action("Login", "Account"); 
+                                }
+                            }">Atividades</a></li>
+                            <li class="nav-item"><a class="nav-link" href="@{
+                                if (Html.GetAuthenticatedUser().ToString() != "") {
+                                    @Url.Action("Revisão", "Admin");
+                                }
+                                else {
+                                    @Url.Action("Login", "Account"); 
+                                }
+                            }">Baralhos</a></li>
                             <li class="nav-item"><a class="nav-link" href="#formcontato">Contato</a></li>
                             <li class="nav-item">
                                 <button id="btn_form"><img id="userconta" src="~/Content/img/elements/user.png" width="45em"></button>
-
+                                @{
+                                    if (Html.GetAuthenticatedUser().ToString() != "")
+                                    {
+                                        <form id="my_form">
+                                            <span>Olá, </span>
+                                            @Html.GetAuthenticatedUser();
+                                            @Html.ActionLink(" - Sair", "Logout", "Account")
+                                            <br />
+                                            <ul>
+                                                <li>
+                                                    @Html.ActionLink("Perfil", "Perfil", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, null)
+                                                </li>
+                                                <li>
+                                                    @Html.ActionLink("Grupos", "Grupos", "Admin", new { area = "Seguranca", name = Html.GetAuthenticatedUser() }, null)
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink("Clique aqui para logar", "Login", "Account", new { area = "Seguranca"}, null)
+                                    }
+                                }
 
                             </li>
                         </ul>
@@ -114,7 +157,8 @@
     </footer>
     <!--================ End footer Area  =================-->
     <!-- Optional JavaScript -->
-    <script type="text/javascript">var btn = document.getElementById('btn_form');
+    <script type="text/javascript">
+        var btn = document.getElementById('btn_form');
         var form = document.getElementById('my_form');
 
         btn.addEventListener('click', function () {
@@ -123,7 +167,8 @@
                 return;
             }
             form.style.display = 'none';
-        });</script>
+        });
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="@Url.Content("~/Content/js/jquery-3.2.1.min.js")"></script>
     <script src="@Url.Content("~/Content/js/popper.js")"></script>

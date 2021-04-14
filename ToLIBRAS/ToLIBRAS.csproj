@@ -422,6 +422,16 @@
     <Content Include="Content\vendors\linericon\fonts\Linearicons-Free.woff2" />
     <Content Include="Areas\Seguranca\Views\web.config" />
     <Content Include="Areas\Seguranca\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Account\Registro.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\AdmDetails.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\Atividades.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\criarGrupo.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\GrupoDetails.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\Grupos.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\MembrosDetails.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\Revisão.cshtml" />
+    <Content Include="Areas\Seguranca\Views\Admin\Perfil.cshtml" />
     <None Include="Scripts\jquery-1.7-vsdoc.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -484,15 +494,19 @@
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Seguranca\Controllers\AccountController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Seguranca\Models\Grupo.cs" />
     <Compile Include="Areas\Seguranca\Models\SegurancaViewModels.cs" />
     <Compile Include="Areas\Seguranca\Models\User.cs" />
     <Compile Include="Areas\Seguranca\SegurancaAreaRegistration.cs" />
+    <Compile Include="DAL\GrupoContext.cs" />
     <Compile Include="DAL\IdentityDbContextAplicacao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infraestrutura\GerenciadorUsuario.cs" />
+    <Compile Include="Infraestrutura\IdentityHelpers.cs" />
     <Compile Include="Migrations\202104012058272_InitialCreate.cs" />
     <Compile Include="Migrations\202104012058272_InitialCreate.Designer.cs">
       <DependentUpon>202104012058272_InitialCreate.cs</DependentUpon>

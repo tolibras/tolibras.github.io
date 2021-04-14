@@ -1,0 +1,91 @@
+﻿@model ToLIBRAS.Areas.Seguranca.Models.UsuarioViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="home_banner_area" id="bannerdouser">
+    <div class="container">
+        <div class="row">
+            <div class="banner_content">
+                <h4 id="revisaoh4">Meu perfil:</h4>
+                <div id="divuser">
+                    <div id="imguser">
+                        <img id="userimg" src="~/Content/img/user/user.png">
+                        <button id="editimg"><img id="imgdobotao" src="~/Content/img/user/edit.png"></button>
+                    </div>
+                    <h5 id="nomeuser">@Html.DisplayFor(model => model.Nome)</h5>
+                    <input id="myButton" class="botaouser" type="submit" value="Editar meus dados"></input>
+                    </br>
+                    @Html.ActionLink("Excluir minha conta", "Delete", "Account", new { id = Model.Id }, new { @class = "botaouser", @id = "botaodelet" })
+                </div>
+
+
+
+                <section id="formcontato" class="formuser">
+                    <article class="artigo">
+                        @using (Html.BeginForm("Editar", "Account", FormMethod.Post, new { @class = "formulario", @id = "formcontato" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.Id)
+                        <fieldset disabled>
+                            <input type="hidden" name="operacao" value="incluir">
+                            <div class="form-row">
+                                <div class="form-groupp h-50">
+                                    <label class="userr" for="nome">Nome do usuário</label>
+                                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "myInput1", @name = "nome", @size = "55" } })
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-groupp">
+                                    <label class="user" for="email">E-mail</label>
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "myInput2", @name = "email", @size = "55", @type = "email" } })
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-groupp">
+                                    <label class="user" for="pswr">Senha</label>
+                                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "txtareauser form-control", @id = "pswr", @name = "password", @size = "55", @type = "password" } })
+                                </div>
+                            </div>
+                            <div id="niveluser">
+                                <button type="submit" id="botaoat" class="botaouser" disabled>Atualizar meus dados</button>
+                            </div>
+                        </fieldset>
+                        }
+                    </article>
+                </section>
+            </div>
+
+</section>
+<!--================ End Home Banner Area =================-->
+<!--================ Start Feature Area =================-->
+<section class="feature_area">
+    <div class="container">
+        <div class="row justify-content-end" id="quemsomos">
+        </div>
+    </div>
+</section>
+
+@section ScriptPage{
+    <script src="@Url.Content("~/Scripts/jquery-3.5.1.js")"></script>
+    <script type="text/javascript">
+        $("#myButton").on("click", function () {
+            if ($("fieldset").prop("disabled")) {
+                $("fieldset").prop("disabled", false);
+                $("#botaoat").css("background-color", "#088cfc");
+                $("#botaoat").css("color", "white");
+                $("#botaoat").prop("disabled", false);
+            }
+            else {
+                $("fieldset").prop("disabled", true);
+                $("#botaoat").css("background-color", "#DCDCDC");
+                $("#botaoat").css("color", "gray");
+                $("#botaoat").prop("disabled", true);
+            }
+        });
+        
+    </script>
+}
+
