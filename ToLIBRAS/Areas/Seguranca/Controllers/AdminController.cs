@@ -30,12 +30,13 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                 return HttpContext.GetOwinContext().GetUserManager<GerenciadorUsuario>();
             }
         }
-        //private GrupoContext contextG; /*
+        private GrupoContext contextG = new GrupoContext(); 
         // GET: Seguranca/Admin
         public ActionResult Index()
         {
             return View();
         }
+
         public ActionResult Atividades()
         {
             return View();
@@ -58,12 +59,32 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
             return View();
         }
         [HttpPost]
-       /* public ActionResult criarGrupo(Grupo g, string name)
+        public ActionResult criarGrupo(Grupo g, string name)
         {
             if (ModelState.IsValid)
             {
-                var u = GerenciadorUser.FindByName(name);
-                User user = GerenciadorUser.FindById(u.Id);
+                try
+                {
+                    User u = GerenciadorUser.FindByName(name) as User;
+                    g.AddMembro(u.Id);
+                    g.AddAdm(u.Id);
+                    contextG.Grupos_Users.Add(g);
+                    int i = 1 + 1;
+                    contextG.SaveChanges();
+                    u.AddGrupo(g.id);
+
+                   
+                }
+                catch(Exception e)
+                {
+                    TempData["exception"] = e;
+                    return RedirectToAction("Erro", "Erro",  new { area = "Errors", exception = e.Message });
+                }
+
+                
+
+
+                /*User user = GerenciadorUser.FindById(u.Id);
                 g.adm = user;
                 g.data_criacao = DateTime.Now;
                 IdentityResult result = GerenciadorUser.Update(user);
@@ -76,13 +97,15 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                 else
                 {
                     return View(g);
-                }
+                }*/
+                return RedirectToAction("Grupos", "Admin");
             }
             else return View(g);
 
-        }*/
+        }
         // GET: Perfil
-       /* public ActionResult Perfil(string name)
+
+        public ActionResult Perfil(string name)
         {
             var u = GerenciadorUser.FindByName(name);
             UsuarioViewModel user = new UsuarioViewModel
@@ -92,10 +115,6 @@ namespace ToLIBRAS.Areas.Seguranca.Controllers
                 Email = u.Email
             };
             return View(user);
-        }*/
-        public ActionResult Perfil()
-        {
-            return View();
         }
         public ActionResult listarGrupos()
         {

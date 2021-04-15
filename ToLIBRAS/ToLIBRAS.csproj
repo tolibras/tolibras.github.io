@@ -432,6 +432,8 @@
     <Content Include="Areas\Seguranca\Views\Admin\MembrosDetails.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\Revisão.cshtml" />
     <Content Include="Areas\Seguranca\Views\Admin\Perfil.cshtml" />
+    <Content Include="Areas\Errors\Views\web.config" />
+    <Content Include="Areas\Errors\Views\Erro\Erro.cshtml" />
     <None Include="Scripts\jquery-1.7-vsdoc.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -494,6 +496,8 @@
   <ItemGroup>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Errors\Controllers\ErroController.cs" />
+    <Compile Include="Areas\Errors\ErrorsAreaRegistration.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AccountController.cs" />
     <Compile Include="Areas\Seguranca\Controllers\AdminController.cs" />
     <Compile Include="Areas\Seguranca\Models\Grupo.cs" />
@@ -527,6 +531,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Errors\Data\" />
+    <Folder Include="Areas\Errors\Views\Shared\" />
     <Folder Include="Areas\Seguranca\Data\" />
     <Folder Include="Areas\Seguranca\Views\Shared\" />
     <Folder Include="Controllers\" />
