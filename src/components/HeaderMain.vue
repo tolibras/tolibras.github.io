@@ -4,7 +4,7 @@
             <img src="imagens/LogoP.svg" alt="">
         </picture>
         <div>
-            <button class="cadastro" onclick="window.location.assign('Novaconta.html')">Criar conta</button><br>
+            <button class="cadastro" @click="redirectPage('Novaconta.html')">Criar conta</button><br>
             <button class="login">Já tenho</button>
         </div>
     </header>
@@ -69,6 +69,9 @@
                     this.header.classList.remove("sticky");
                     console.log(this.sticky);
                 }
+            },
+            redirectPage(url){
+                window.location.assign(url);
             }
         }
     }
