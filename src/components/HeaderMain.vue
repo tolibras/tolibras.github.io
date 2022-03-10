@@ -52,7 +52,8 @@
         data(){
             return{
                 header: null,
-                sticky: null
+                sticky: null,
+                link: null
             }
         },
         mounted(){
