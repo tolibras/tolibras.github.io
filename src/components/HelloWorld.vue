@@ -2,7 +2,7 @@
 	import { ref } from 'vue'
 
 	defineProps({
-	msg: String
+		msg: String
 	})
 
 	const count = ref(0)
@@ -37,6 +37,6 @@
 
 <style scoped>
 	a {
-	color: #42b983;
+		color: #42b983;
 	}
 </style>
