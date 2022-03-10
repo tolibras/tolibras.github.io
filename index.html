@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UM-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seja Bem-vindo ao ToLIBRAS</title>
+
+	<!-- FontAwesome e JQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+	<!-- Bulma e Css's -->
+	<link rel="stylesheet" type="text/css" href="css/comum.css">
+	<link rel="stylesheet" media="screen and (max-width: 1920px) and (min-width: 1750px)" type="text/css" href="css/cssinicial1920.css">
+	<link rel="stylesheet" media="screen and (max-width: 1500px) and (min-width: 1281px)" type="text/css" href="css/cssinicial1440.css">
+	<link rel="stylesheet" media="screen and (max-width: 1280px)" type="text/css" href="css/cssinicial1280.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyles.css">
+</head>
+<body onscroll="fixarHead()">
+	<main>
+		<header id="head">
+			<picture>
+				<img src="imagens/LogoP.svg" alt="">
+			</picture>
+			<div>
+				<button class="cadastro" onclick="window.location.assign('Novaconta.html')">Criar conta</button><br>
+				<button class="login">Já tenho</button>
+			</div>
+		</header>
+		<section class="home">
+			<picture>
+				<img src="imagens/LogoG.svg" alt="">
+			</picture>
+			<h2>Olá! Esteja à vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
+			<div>
+				<button class="cadastro" onclick="window.location.assign('Novaconta.html')">Criar conta</button><br>
+				<button class="login">Já tenho</button>
+			</div>
+		</section>
+		<div id="fakehead">
+			<picture>
+				<img src="imagens/LogoP.svg" alt="">
+			</picture>
+			<div>
+				<button class="cadastro" onclick="window.location.assign('Novaconta.html')">Criar conta</button><br>
+				<button class="login">Já tenho</button>
+			</div>
+		</div>
+		<section class="scrollhome">
+			<div class="modal" id="page-modal">
+			  	<div class="modal-background"></div>
+		  		<div class="modal-card">
+		    		<header class="modal-card-head">
+		      			<p class="modal-card-title">Entrar</p>
+		      			<button class="delete" aria-label="close"></button>
+		    		</header>
+		    		<section class="modal-card-body">
+		      			<div class="field">
+							<p class="control has-icons-left has-icons-right">
+								<input class="input is-rounded" type="email" placeholder="Email">
+								<span class="icon is-small is-left">
+								  <i class="fas fa-envelope"></i>
+								</span>
+								<span class="icon is-small is-right">
+								  <i class="fas fa-check"></i>
+								</span>
+							</p>
+						</div>
+						<div class="field">
+							<p class="control has-icons-left">
+								<input class="input is-rounded" type="password" placeholder="Password">
+								<span class="icon is-small is-left">
+								  <i class="fas fa-lock"></i>
+								</span>
+							</p>
+						</div>
+						<a href="#">Esqueceu a senha</a>
+		    		</section>
+		    		<footer class="modal-card-foot">
+		      			<button onclick="window.location.assign('Paginicial.html')" class="button is-primary is-fullwidth">
+							Login
+						</button>
+		    		</footer>
+		  		</div>
+			</div>
+			<div id="frd">
+				<div class="boxinfo">
+					<h2 class="title">Lorem</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<figure>
+				<img class="boxinfo" id="fr" src="imagens/FormacaoToLIBRAS.svg" alt="">
+			</figure>
+			<div id="fld">
+				<div class="boxinfo">
+					<h2 class="title">Lorem</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<h3>Todos os direitos reservados 2XXX©</h3>
+		<div id="img">
+			<a href="https://instagram.com/ToLIBRAS">
+				<picture id="insta">
+					<img src="imagens/insta.svg" alt="">
+				</picture>
+			</a>
+			<a href="https://twitter.com/ToLIBRAS">
+				<picture id="twitter">
+					<img src="imagens/twitter.svg" alt="">
+				</picture>
+			</a>
+			<a href="https://facebook.com/ToLIBRAS">
+				<picture id="face">
+					<img src="imagens/face.svg" alt="">
+				</picture>
+			</a>
+		</div>
+	</footer>
+</body>
+<!-- Js -->
+<script src="Js/main.js"></script>
+</html>
