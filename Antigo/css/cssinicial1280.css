@@ -1,0 +1,120 @@
+/* 	 Section de apresentação   */
+section.home{
+	background-image: url(../imagens/Fundoinicial1280.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+    color: white;
+    text-align: center;
+}
+section h1{
+	padding-top: 2em;
+}
+section.home h2{
+	font-size: 33px;
+	margin-top: 60px;
+	font-weight: 600;
+}
+section.home img{
+	padding-top: 20px;
+}
+section.home div{
+	margin-top: 30px;
+	padding-bottom: 17em;
+}
+div.modal-card a{
+	text-decoration: underline;
+	color:#8C8C8C;
+}
+
+
+/* 	 Header	  */
+div#fakehead button.cadastro, header#head button.cadastro{
+	margin-right: 10px;
+}
+header#head{
+	visibility: hidden;
+	width: -webkit-fill-available;
+	top: 0;
+	position: fixed;
+}
+div#fakehead{
+	width: -webkit-fill-available;
+}
+header div,div#fakehead div{
+	display: flex;
+}
+header, div#fakehead{
+	background-color: #002D94;
+	display: flex !important;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	padding: 1em;
+}
+
+
+/* 	 Section scrollhome	  */
+section.scrollhome{
+	margin: 10em;
+}
+img.boxinfo{
+	height: 8em;
+	margin: 6em 0;
+}
+div.boxinfo{
+	text-align: center;
+}
+section.scrollhome figure{
+	text-align: center;
+}
+.boxinfo p{
+	font-size: 18px;
+	font-weight: 600;
+}
+div#page-modal{
+	display: none;
+}
+
+/* 	 Butões	  */
+header button.login, header button.cadastro, div#fakehead button.login,div#fakehead button.cadastro{
+	color: white;
+	border-radius: 30px;
+	border-color: transparent;
+	font-size: 23px;
+	width: 165px;
+	height: 50px;
+}
+button.cadastro{
+	background-color: #06D148;
+	box-shadow: 0 5px #05B056;
+	margin-bottom: 10px;
+}
+button.login{
+	background-color: #003CC7;
+	box-shadow: 0 5px #013ABE;
+}
+button.cadastro:hover{
+	background-color: #02ed4e;
+	box-shadow: 0 5px #06D148; 
+}
+button.login:hover{
+	background-color: #0242d6;
+	box-shadow: 0 5px #003CC7;
+}
+button{
+	cursor: pointer;
+	outline: none;
+}
+button.cadastro:active, button.login:active{
+	transform: translateY(5px);
+	box-shadow: none;
+}
+section.home button.login, section.home button.cadastro{
+	color: white;
+	border-radius: 30px;
+	border-color: transparent;
+	font-size: 25px;
+	width: 200px;
+	height: 50px;
+	font-weight: 700;
+}
