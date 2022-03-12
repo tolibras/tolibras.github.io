@@ -48,7 +48,7 @@
             </div>
         </div>
         <figure>
-            <img class="boxinfo" id="fr" src="imagens/FormacaoToLIBRAS.svg" alt="">
+            <img class="boxinfo" id="fr" src="/imagens/FormacaoToLIBRAS.svg" alt="">
         </figure>
         <div id="fld">
             <div class="boxinfo">

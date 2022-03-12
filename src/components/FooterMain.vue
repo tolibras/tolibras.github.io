@@ -4,17 +4,17 @@
 		<div id="img">
 			<a href="https://instagram.com/ToLIBRAS">
 				<picture id="insta">
-					<img src="imagens/insta.svg" alt="">
+					<img src="/imagens/insta.svg" alt="">
 				</picture>
 			</a>
 			<a href="https://twitter.com/ToLIBRAS">
 				<picture id="twitter">
-					<img src="imagens/twitter.svg" alt="">
+					<img src="/imagens/twitter.svg" alt="">
 				</picture>
 			</a>
 			<a href="https://facebook.com/ToLIBRAS">
 				<picture id="face">
-					<img src="imagens/face.svg" alt="">
+					<img src="/imagens/face.svg" alt="">
 				</picture>
 			</a>
 		</div>

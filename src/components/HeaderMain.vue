@@ -1,7 +1,7 @@
 <template>
     <header id="head">
         <picture>
-            <img src="imagens/LogoP.svg" alt="">
+            <img src="/imagens/LogoP.svg" alt="">
         </picture>
         <div>
             <button class="cadastro" @click="redirectPage('Novaconta.html')">Criar conta</button><br>
