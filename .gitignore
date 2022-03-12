@@ -12,14 +12,12 @@ node_modules
 yarn.lock
 .Antigo/package.json
 !package.json
-package-lock.json
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
 .vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
