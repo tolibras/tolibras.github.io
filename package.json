@@ -1,14 +1,16 @@
 {
   "name": "tolibras",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview"
   },
   "dependencies": {
     "vue": "^3.2.25"
