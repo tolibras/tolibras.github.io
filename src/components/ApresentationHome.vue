@@ -1,7 +1,7 @@
 <template>
     <section class="home">
         <picture>
-            <img src="imagens/LogoG.svg" alt="">
+            <img src="/imagens/LogoG.svg" alt="">
         </picture>
         <h2>Olá! Esteja à vontade para aprender a Lingua Brasileira de Sinais<br>em nossa plataforma.</h2>
         <div>
