@@ -14,7 +14,7 @@
 <style scoped>
     /* 	 Section de apresentação   */
 	section.home{
-		background-image: url(../imagens/Fundoinicial1280.jpg);
+		background-image: url(../imagens/Apresentacao.png);
 		background-repeat: no-repeat;
 		background-size: 100%;
 		color: white;
